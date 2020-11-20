@@ -530,7 +530,7 @@ export default function Home() {
         <div className='email-container'>
           <h3>Ingin Membantu Kami?</h3>
           <Input placeholder='Alamat Email' width='30%' margin={'.8rem 0'} />
-          <Button>Subscribe</Button>
+          <Button>Donasi</Button>
         </div>
       </Contribution>
     </>
