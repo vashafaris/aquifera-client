@@ -14,6 +14,7 @@ const Container = styled.header`
   background-color: ${Colors.Primary};
   color: #fff;
   border-bottom: 1px solid rgb(255, 255, 255, 20%);
+  opacity: 0.95;
 
   display: flex;
   align-items: center;
@@ -48,6 +49,11 @@ const Container = styled.header`
 
         li {
           margin: 0 4%;
+          border-bottom: 3px solid ${Colors.Primary};
+
+          :hover {
+            border-bottom: 3px solid ${Colors.Secondary};
+          }
         }
       }
     }

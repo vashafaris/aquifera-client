@@ -6,8 +6,8 @@ import { Colors } from '../enum/color';
 
 const Hero = styled.section`
   position: relative;
-  height: calc(100vh - 7rem);
-  margin-top: 7rem;
+  height: 100vh;
+  padding-top: 7rem;
   padding: 0 5%;
   background-color: ${Colors.Primary};
   color: #fff;
@@ -52,13 +52,14 @@ const Hero = styled.section`
     }
 
     h1 {
-      font-size: 3.6rem;
+      font-size: 6.4rem;
       font-weight: bold;
       margin: 1.2rem 0;
     }
 
     .sponsor-container {
       position: absolute;
+      z-index: 2;
       right: 0;
       bottom: 2rem;
       align-self: flex-end;
@@ -71,6 +72,17 @@ const Hero = styled.section`
       p {
         margin-bottom: 0.8rem;
       }
+    }
+    .img-bg {
+      position: absolute;
+      right: 0;
+      bottom: 2rem;
+      width: 10rem;
+      height: 5.5rem;
+      border-radius: 0.4rem;
+      background-color: ${Colors.Secondary};
+
+      transform: translateX(-3rem);
     }
   }
 `;
@@ -85,6 +97,9 @@ const Village = styled.section`
   align-items: center;
 
   .container {
+    height: 100%;
+    position: relative;
+
     display: flex;
 
     .img-container {
@@ -94,15 +109,62 @@ const Village = styled.section`
 
       display: flex;
       justify-content: flex-end;
+      .village-img {
+        width: 48rem;
+        height: 32rem;
+        z-index: 2;
+        position: relative;
+        border: 0.1rem solid black;
+      }
 
-      img {
-        display: block;
-        width: 40%;
+      .img-bg {
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 48rem;
+        height: 32rem;
+        background-color: ${Colors.Primary};
+        border: 0.1rem solid black;
+
+        transform: translate(0.8rem, 1rem);
+      }
+
+      .text-bg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 27rem;
+        height: 5.2rem;
+        background-color: ${Colors.Secondary};
+
+        transform: translate(27rem, 3.8rem);
       }
     }
 
     .info-container {
+      position: relative;
+      z-index: 2;
       flex: 1;
+
+      h4 {
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+
+      h2 {
+        font-size: 4.8rem;
+        font-weight: bold;
+        margin: 1.6rem 0;
+      }
+
+      p {
+        margin-bottom: 1.6rem;
+      }
+
+      a {
+        font-weight: bold;
+      }
     }
   }
 `;
@@ -140,8 +202,37 @@ export default function Home() {
               />
             </div>
           </div>
+          <div className='img-bg'></div>
         </div>
       </Hero>
+      <Village>
+        <div className='container'>
+          <div className='img-container'>
+            <img
+              src='/png/home-village.png'
+              alt='desa mekarlaksana'
+              className='village-img'
+            />
+            <div className='img-bg'></div>
+            <div className='text-bg'></div>
+          </div>
+          <div className='info-container'>
+            <h4>PILOT PROJECT</h4>
+            <h2>
+              Harapan untuk Desa
+              <br />
+              Mekarlaksana
+            </h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium
+              nisl morbi dictumst sed tincidunt consectetur congue nulla. Sed
+              quis ornare eu augue consequat turpis eget volutpat. Habitasse
+              velit laoreet urna, cursus lorem at et etiam justo.{' '}
+            </p>
+            <a href=''>Pelajari Lebih Lanjut</a>
+          </div>
+        </div>
+      </Village>
     </>
   );
 }
