@@ -2,12 +2,11 @@ import Image from 'next/image';
 import styled from 'styled-components';
 
 import Button from '../components/Button';
-import Layout from '../components/Layout';
 import { Colors } from '../enum/color';
 
 const Hero = styled.section`
   position: relative;
-  min-height: calc(100vh - 7rem);
+  height: calc(100vh - 7rem);
   margin-top: 7rem;
   padding: 0 5%;
   background-color: ${Colors.Primary};
@@ -21,31 +20,31 @@ const Hero = styled.section`
     top: 0;
     left: 0;
     height: 100%;
+    left: 20%;
   }
 
   .icon-container {
-    padding-top: 5%;
     position: relative;
     flex: 4;
 
     display: flex;
-    align-items: flex-start;
+    align-items: center;
 
     .img-container {
       flex: 1;
       position: relative;
-      height: 80%;
+      height: 70%;
     }
   }
 
   .info-container {
     position: relative;
     flex: 6;
-    padding: 5% 5%;
+    padding: 0 5%;
 
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
 
     p {
       font-size: 1.2rem;
@@ -53,14 +52,14 @@ const Hero = styled.section`
     }
 
     h1 {
-      font-size: 6.4rem;
+      font-size: 5.2rem;
       font-weight: bold;
       margin: 1.2rem 0;
     }
 
     .sponsor-container {
       align-self: flex-end;
-      margin-top: 10%;
+      margin-top: 15%;
 
       display: flex;
       flex-direction: column;
@@ -69,6 +68,38 @@ const Hero = styled.section`
       p {
         margin-bottom: 0.8rem;
       }
+    }
+  }
+`;
+
+const Village = styled.section`
+  position: relative;
+  height: 60vh;
+  background-color: #fff;
+  padding: 5% 5%;
+
+  display: flex;
+  align-items: center;
+
+  .container {
+    display: flex;
+
+    .img-container {
+      position: relative;
+      margin-right: 5rem;
+      flex: 1;
+
+      display: flex;
+      justify-content: flex-end;
+
+      img {
+        display: block;
+        width: 40%;
+      }
+    }
+
+    .info-container {
+      flex: 1;
     }
   }
 `;
@@ -88,19 +119,23 @@ export default function Home() {
           </div>
         </div>
         <div className='info-container'>
-          <p>FAKTANYA</p>
-          <h1>
-            2 dari 10 orang Indonesia kesulitan dalam mengakses air bersih.{' '}
-          </h1>
-          <Button>Pelajari Lebih Lanjut</Button>
+          <div className='main-container'>
+            <p>FAKTANYA</p>
+            <h1>
+              2 dari 10 orang Indonesia kesulitan dalam mengakses air bersih.{' '}
+            </h1>
+            <Button>Pelajari Lebih Lanjut</Button>
+          </div>
           <div className='sponsor-container'>
             <p>AQUIFERA DIDUKUNG OLEH</p>
-            <Image
-              src='/png/home-mtt.png'
-              alt='logo mtt telkom'
-              height={55}
-              width={100}
-            />
+            <div>
+              <Image
+                src='/png/home-mtt.png'
+                alt='logo mtt telkom'
+                height={55}
+                width={100}
+              />
+            </div>
           </div>
         </div>
       </Hero>
