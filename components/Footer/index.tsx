@@ -23,6 +23,10 @@ const Footer = styled.footer`
       margin: 2.4rem 0.8rem;
     }
   }
+
+  p {
+    font-size: 1.2rem;
+  }
 `;
 
 export default () => {
