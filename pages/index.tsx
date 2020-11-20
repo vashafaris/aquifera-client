@@ -52,12 +52,15 @@ const Hero = styled.section`
     }
 
     h1 {
-      font-size: 5.2rem;
+      font-size: 3.6rem;
       font-weight: bold;
       margin: 1.2rem 0;
     }
 
     .sponsor-container {
+      position: absolute;
+      right: 0;
+      bottom: 2rem;
       align-self: flex-end;
       margin-top: 15%;
 
