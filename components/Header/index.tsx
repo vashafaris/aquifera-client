@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import styled from 'styled-components';
 
-import { Colors } from '../../enum/color';
+import { Colors } from '../../enum/color.enum';
 
-const Container = styled.header`
+const Header = styled.header`
   z-index: 10;
   position: fixed;
   top: 0;
@@ -61,9 +61,9 @@ const Container = styled.header`
   }
 `;
 
-const Header = () => {
+export default () => {
   return (
-    <Container>
+    <Header>
       <nav>
         <div className='block--left'>
           <a href='' className='logo'>
@@ -78,7 +78,7 @@ const Header = () => {
         <div className='block--right'>
           <ul>
             <li>
-              <a href=''>Tentang Air</a>
+              <a href=''>Mengapa Air ?</a>
             </li>
             <li>
               <a href=''>Pencapaian Kami</a>
@@ -89,8 +89,6 @@ const Header = () => {
           </ul>
         </div>
       </nav>
-    </Container>
+    </Header>
   );
 };
-
-export default Header;

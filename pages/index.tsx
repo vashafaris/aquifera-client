@@ -2,7 +2,8 @@ import Image from 'next/image';
 import styled from 'styled-components';
 
 import Button from '../components/Button';
-import { Colors } from '../enum/color';
+import Input from '../components/Input';
+import { Colors } from '../enum/color.enum';
 
 const Hero = styled.section`
   position: relative;
@@ -16,10 +17,10 @@ const Hero = styled.section`
 
   .img-background {
     position: absolute;
-
     top: 0;
+    left: 0;
     height: 100%;
-    left: 20%;
+    transform: translateX(4%);
   }
 
   .icon-container {
@@ -92,7 +93,7 @@ const Hero = styled.section`
 
 const Village = styled.section`
   position: relative;
-  height: 55rem;
+  min-height: 5.5rem;
   background-color: #fff;
   padding: 5% 5%;
 
@@ -100,7 +101,6 @@ const Village = styled.section`
   align-items: center;
 
   .line-bg {
-    display: none;
     position: absolute;
 
     top: 0;
@@ -108,6 +108,7 @@ const Village = styled.section`
   }
 
   .container {
+    margin: 4.6rem 0;
     position: relative;
 
     display: flex;
@@ -190,6 +191,166 @@ const Village = styled.section`
   }
 `;
 
+const Commitment = styled.section`
+  position: relative;
+  min-height: 80vh;
+  padding: 0 5%;
+
+  .img-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateY(50%);
+  }
+
+  h2 {
+    font-size: 4.8rem;
+    font-weight: bold;
+    letter-spacing: -2%;
+    margin-bottom: 2.4rem;
+
+    ::before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      display: inline-block;
+      width: calc(27rem + 5%);
+      height: 5.2rem;
+      background-color: ${Colors.Secondary};
+      transform: translate(-21%, 0.2rem);
+    }
+
+    ::after {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      display: inline-block;
+      width: 25%;
+      border-bottom: 1px solid ${Colors.Secondary};
+      transform: translate(5%, 3rem);
+    }
+  }
+
+  .list-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    .item-container {
+      flex-basis: 50%;
+      flex-shrink: 0;
+      flex-grow: 0;
+
+      padding: 5rem;
+      color: ${Colors.Primary};
+
+      display: flex;
+
+      .icon-container {
+        margin-right: 1.6rem;
+      }
+
+      .info-container {
+        h4 {
+          font-size: 2.4rem;
+          font-weight: bold;
+          margin-bottom: 1.2rem;
+        }
+
+        p {
+          width: 75%;
+          font-weight: 200;
+          line-height: 161%;
+        }
+
+        .--important {
+          font-weight: bold;
+          width: 100%;
+        }
+      }
+    }
+  }
+`;
+
+const Contribution = styled.section`
+  position: relative;
+  /* min-height: 80vh; */
+  padding: 0 5%;
+
+  h2 {
+    font-size: 4.8rem;
+    font-weight: bold;
+    letter-spacing: -2%;
+    margin-bottom: 2.4rem;
+
+    ::before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      display: inline-block;
+      width: calc(27rem + 5%);
+      height: 5.2rem;
+      background-color: ${Colors.Secondary};
+      transform: translate(-21%, 0.2rem);
+    }
+
+    ::after {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      display: inline-block;
+      width: 25%;
+      border-bottom: 1px solid ${Colors.Secondary};
+      transform: translate(5%, 3rem);
+    }
+  }
+
+  .container {
+    color: ${Colors.Primary};
+
+    display: flex;
+    align-items: center;
+
+    .info-container {
+      flex: 1;
+
+      p {
+        font-size: 2rem;
+        line-height: 161%;
+      }
+    }
+
+    .detail-container {
+      flex: 0;
+      padding: 0 10%;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      h4 {
+        font-size: 4.8rem;
+        letter-spacing: -2%;
+        line-height: 130%;
+      }
+
+      p {
+        font-size: 2.4rem;
+        line-height: 130%;
+        margin-bottom: 1.2rem;
+      }
+    }
+  }
+
+  .email-container {
+    margin: 8rem 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+`;
+
 export default function Home() {
   return (
     <>
@@ -265,6 +426,113 @@ export default function Home() {
           </div>
         </div>
       </Village>
+
+      <Commitment>
+        <h2>Komitmen Kami</h2>
+        <div className='list-container'>
+          <div className='item-container'>
+            <div className='icon-container'>
+              <Image
+                src='/svg/money-icon.svg'
+                alt='logo uang'
+                width={54}
+                height={42}
+              />
+            </div>
+            <div className='info-container'>
+              <h4>Donasi 100%</h4>
+              <p>
+                Dana donasi tersalurkan sepenuhnya untuk kegiatan pengadaan air.
+              </p>
+              <p className='--important'>
+                *Kegiatan operasional telah ditanggung oleh donatur.
+              </p>
+            </div>
+          </div>
+          <div className='item-container'>
+            <div className='icon-container'>
+              <Image
+                src='/svg/target-icon.svg'
+                alt='logo uang'
+                width={64}
+                height={64}
+              />
+            </div>
+            <div className='info-container'>
+              <h4>Teknologi Tepat Guna</h4>
+              <p>
+                Solusi teknologi yang digunakan menyesuaikan dengan permasalahan
+                di setiap daerah.
+              </p>
+            </div>
+          </div>
+          <div className='item-container'>
+            <div className='icon-container'>
+              <Image
+                src='/svg/people-icon.svg'
+                alt='logo uang'
+                width={64}
+                height={64}
+              />
+            </div>
+            <div className='info-container'>
+              <h4>Akuntabilitas</h4>
+              <p>
+                Semua projek yang ada dibuktikan dengan hasil dan data real-time
+                dengan bantuan teknologi Internet of Things (IoT)
+              </p>
+            </div>
+          </div>
+          <div className='item-container'>
+            <div className='icon-container'>
+              <Image
+                src='/svg/clock-icon.svg'
+                alt='logo uang'
+                width={64}
+                height={64}
+              />
+            </div>
+            <div className='info-container'>
+              <h4>Program Berkelanjutan</h4>
+              <p>
+                Bekerjasama dengan organisasi setempat dan local-champion dalam
+                mengusahakan keberlanjutan
+              </p>
+            </div>
+          </div>
+        </div>
+        <img
+          src='/svg/home-bg-3.svg'
+          alt='background image'
+          className='img-bg'
+        />
+      </Commitment>
+
+      <Contribution>
+        <h2>Kontribusi Kami</h2>
+        <div className='container'>
+          <div className='info-container'>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium
+              nisl morbi dictumst sed tincidunt consectetur congue nulla. Sed
+              quis ornare eu augue consequat turpis eget volutpat. Habitasse
+              velit laoreet urna, cursus lorem at et etiam justo. Faucibus vitae
+              magna leo semper lacus pulvinar cursus.
+            </p>
+          </div>
+          <div className='detail-container'>
+            <h4>20.000</h4>
+            <p>Masyarakat</p>
+            <h4>5</h4>
+            <p>Desa</p>
+          </div>
+        </div>
+        <div className='email-container'>
+          <h3>Ingin Membantu Kami?</h3>
+          <Input placeholder='Alamat Email' width='30%' margin={'.8rem 0'} />
+          <Button>Subscribe</Button>
+        </div>
+      </Contribution>
     </>
   );
 }
