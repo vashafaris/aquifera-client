@@ -18,7 +18,6 @@ const Hero = styled.section`
     position: absolute;
 
     top: 0;
-    left: 0;
     height: 100%;
     left: 20%;
   }
@@ -55,6 +54,10 @@ const Hero = styled.section`
       font-size: 6.4rem;
       font-weight: bold;
       margin: 1.2rem 0;
+
+      @media (max-height: 700px) {
+        font-size: 5.2rem;
+      }
     }
 
     .sponsor-container {
@@ -89,15 +92,22 @@ const Hero = styled.section`
 
 const Village = styled.section`
   position: relative;
-  height: 60vh;
+  height: 55rem;
   background-color: #fff;
   padding: 5% 5%;
 
   display: flex;
   align-items: center;
 
+  .line-bg {
+    display: none;
+    position: absolute;
+
+    top: 0;
+    right: 0;
+  }
+
   .container {
-    height: 100%;
     position: relative;
 
     display: flex;
@@ -109,12 +119,22 @@ const Village = styled.section`
 
       display: flex;
       justify-content: flex-end;
+
       .village-img {
         width: 48rem;
         height: 32rem;
         z-index: 2;
         position: relative;
         border: 0.1rem solid black;
+      }
+
+      .img-bg-rd {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateY(-50%);
+        width: 20rem;
+        height: 20rem;
       }
 
       .img-bg {
@@ -160,6 +180,7 @@ const Village = styled.section`
 
       p {
         margin-bottom: 1.6rem;
+        color: ${Colors.Primary};
       }
 
       a {
@@ -205,9 +226,20 @@ export default function Home() {
           <div className='img-bg'></div>
         </div>
       </Hero>
+
       <Village>
+        <img
+          src='/svg/home-bg-2.svg'
+          alt='background image'
+          className='line-bg'
+        />
         <div className='container'>
           <div className='img-container'>
+            <img
+              src='/svg/home-bg-rd-2.svg'
+              alt='background image'
+              className='img-bg-rd'
+            />
             <img
               src='/png/home-village.png'
               alt='desa mekarlaksana'

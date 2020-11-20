@@ -48,6 +48,7 @@ const Container = styled.header`
         justify-content: flex-end;
 
         li {
+          padding: 0.4rem;
           margin: 0 4%;
           border-bottom: 3px solid ${Colors.Primary};
 
