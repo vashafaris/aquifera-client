@@ -4,6 +4,7 @@ import GlobalStyle from '../styles/global';
 import '../styles/font.css';
 import useDevices from '../hooks/useDevices';
 import Mobile from '../components/Mobile';
+import Footer from '../components/Footer';
 
 function MyApp({ Component, pageProps }) {
   const currentDevice = useDevices();
@@ -26,6 +27,7 @@ function MyApp({ Component, pageProps }) {
       <GlobalStyle />
       <Header />
       <Component {...pageProps} />
+      <Footer />
     </>
   );
 }
