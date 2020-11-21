@@ -95,7 +95,11 @@ const Village = styled.section`
   position: relative;
   min-height: 5.5rem;
   background-color: #fff;
-  padding: 5% 5%;
+  padding: 8% 10%;
+
+  @media (max-width: 1360px) {
+    padding: 8% 5%;
+  }
 
   display: flex;
   align-items: center;
@@ -212,12 +216,13 @@ const Commitment = styled.section`
     ::before {
       content: '';
       position: absolute;
+      left: -0.25rem;
       z-index: -1;
       display: inline-block;
-      width: calc(27rem + 10%);
+      width: calc(27.5rem + 10%);
       height: 5.2rem;
       background-color: ${Colors.Secondary};
-      transform: translate(-35%, 0.2rem);
+      transform: translate(0, 0.2rem);
     }
 
     ::after {
@@ -236,6 +241,7 @@ const Commitment = styled.section`
     flex-wrap: wrap;
 
     .item-container {
+      margin: 0 auto;
       flex-basis: 50%;
       flex-shrink: 0;
       flex-grow: 0;
@@ -273,7 +279,6 @@ const Commitment = styled.section`
 
 const Contribution = styled.section`
   position: relative;
-  /* min-height: 80vh; */
   padding: 0 10%;
 
   h2 {
@@ -285,12 +290,12 @@ const Contribution = styled.section`
     ::before {
       content: '';
       position: absolute;
+      left: -0.25rem;
       z-index: -1;
       display: inline-block;
       width: calc(27rem + 10%);
       height: 5.2rem;
       background-color: ${Colors.Secondary};
-      transform: translate(-35%, 0.2rem);
     }
 
     ::after {
@@ -523,8 +528,8 @@ export default function Home() {
           <div className='detail-container'>
             <h4>20.000</h4>
             <p>Masyarakat</p>
-            <h4>5</h4>
-            <p>Desa</p>
+            <h4>2160</h4>
+            <p>L/Jam</p>
           </div>
         </div>
         <div className='email-container'>
