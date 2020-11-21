@@ -194,7 +194,7 @@ const Village = styled.section`
 const Commitment = styled.section`
   position: relative;
   min-height: 80vh;
-  padding: 0 5%;
+  padding: 0 10%;
 
   .img-bg {
     position: absolute;
@@ -214,10 +214,10 @@ const Commitment = styled.section`
       position: absolute;
       z-index: -1;
       display: inline-block;
-      width: calc(27rem + 5%);
+      width: calc(27rem + 10%);
       height: 5.2rem;
       background-color: ${Colors.Secondary};
-      transform: translate(-21%, 0.2rem);
+      transform: translate(-35%, 0.2rem);
     }
 
     ::after {
@@ -274,7 +274,7 @@ const Commitment = styled.section`
 const Contribution = styled.section`
   position: relative;
   /* min-height: 80vh; */
-  padding: 0 5%;
+  padding: 0 10%;
 
   h2 {
     font-size: 4.8rem;
@@ -287,10 +287,10 @@ const Contribution = styled.section`
       position: absolute;
       z-index: -1;
       display: inline-block;
-      width: calc(27rem + 5%);
+      width: calc(27rem + 10%);
       height: 5.2rem;
       background-color: ${Colors.Secondary};
-      transform: translate(-21%, 0.2rem);
+      transform: translate(-35%, 0.2rem);
     }
 
     ::after {
@@ -321,7 +321,7 @@ const Contribution = styled.section`
 
     .detail-container {
       flex: 0;
-      padding: 0 10%;
+      padding-left: 10%;
 
       display: flex;
       flex-direction: column;
