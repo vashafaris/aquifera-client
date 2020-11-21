@@ -76,8 +76,7 @@ const Mobile = () => {
       </ul>
       <p>
         Untuk sementara versi <strong>mobile</strong> belum tersedia,Harap akses
-        melalui
-        <strong>desktop/laptop</strong>.
+        melalui <strong>desktop/laptop</strong>.
       </p>
     </Container>
   );
