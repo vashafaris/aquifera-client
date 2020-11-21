@@ -48,9 +48,10 @@ const Header = styled.header`
         justify-content: flex-end;
 
         li {
-          padding: 0.4rem;
+          padding: 0.8rem 0;
           margin: 0 4%;
           border-bottom: 3px solid ${Colors.Primary};
+          transition: 0.3s;
 
           :hover {
             border-bottom: 3px solid ${Colors.Secondary};

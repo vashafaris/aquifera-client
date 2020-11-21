@@ -222,7 +222,7 @@ const Commitment = styled.section`
       width: calc(27.5rem + 10%);
       height: 5.2rem;
       background-color: ${Colors.Secondary};
-      transform: translate(0, 0.2rem);
+      transform: translateY(0.2rem);
     }
 
     ::after {
@@ -296,6 +296,7 @@ const Contribution = styled.section`
       width: calc(27rem + 10%);
       height: 5.2rem;
       background-color: ${Colors.Secondary};
+      transform: translateY(0.2rem);
     }
 
     ::after {

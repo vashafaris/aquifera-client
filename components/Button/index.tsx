@@ -22,6 +22,12 @@ const Button = styled.button`
   font-size: 1.6rem;
   line-height: 140%;
   font-weight: bold;
+
+  transition: 0.3s;
+
+  :hover {
+    background-color: #ba833c;
+  }
 `;
 
 export default ({ children }) => {
