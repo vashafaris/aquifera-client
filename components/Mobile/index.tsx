@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { Colors } from '../../enum/color.enum';
 
 const Container = styled.div`
+  padding: 2rem;
   min-height: 100vh;
   background-color: ${Colors.Primary};
   color: #fff;
@@ -27,9 +28,10 @@ const Container = styled.div`
   p:last-child {
     position: absolute;
     bottom: 2rem;
-    right: 2rem;
-    margin-top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
     font-size: 0.8rem;
+    text-align: center;
   }
 `;
 
