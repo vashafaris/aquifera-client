@@ -242,11 +242,11 @@ const Commitment = styled.section`
 
     .item-container {
       margin: 0 auto;
-      flex-basis: 50%;
+      flex-basis: 40%;
       flex-shrink: 0;
       flex-grow: 0;
 
-      padding: 5rem;
+      padding: 4rem;
       color: ${Colors.Primary};
 
       display: flex;
@@ -263,7 +263,7 @@ const Commitment = styled.section`
         }
 
         p {
-          width: 75%;
+          width: 100%;
           font-weight: 200;
           line-height: 161%;
         }
@@ -472,6 +472,8 @@ export default function Home() {
               </p>
             </div>
           </div>
+        </div>
+        <div className='list-container'>
           <div className='item-container'>
             <div className='icon-container'>
               <Image
