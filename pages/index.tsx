@@ -242,7 +242,7 @@ const Commitment = styled.section`
 
     .item-container {
       margin: 0 auto;
-      flex-basis: 40%;
+      flex-basis: 50%;
       flex-shrink: 0;
       flex-grow: 0;
 
