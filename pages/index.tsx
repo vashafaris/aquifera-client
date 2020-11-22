@@ -189,7 +189,14 @@ const Village = styled.section`
       }
 
       a {
+        padding-bottom: 0.8rem;
         font-weight: bold;
+        border-bottom: 3px solid #fff;
+        transition: 0.3s;
+
+        :hover {
+          border-bottom: 3px solid ${Colors.Secondary};
+        }
       }
     }
   }
@@ -199,6 +206,10 @@ const Commitment = styled.section`
   position: relative;
   min-height: 80vh;
   padding: 0 10%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   .img-bg {
     position: absolute;
@@ -242,9 +253,13 @@ const Commitment = styled.section`
 
     .item-container {
       margin: 0 auto;
-      flex-basis: 50%;
+      flex-basis: 40%;
       flex-shrink: 0;
       flex-grow: 0;
+
+      @media (max-width: 1306px) {
+        flex-basis: 50%;
+      }
 
       padding: 4rem;
       color: ${Colors.Primary};
