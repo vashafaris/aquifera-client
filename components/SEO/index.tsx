@@ -3,9 +3,9 @@ import { Helmet } from 'react-helmet';
 
 const SEO = ({ title, meta, keywords }) => {
   const description =
-    'Organisasi kemasyarakatan berbasis teknologi dengan mengelola dana yang dititipkan oleh pihak donatur atas keinginannya untuk berkontribusi bagi masyarakat terhadap permasalahan air. | Aquifera';
+    'Organisasi kemasyarakatan berbasis teknologi yang mengelola dana dari pihak donatur untuk berkontribusi bagi masyarakat terhadap permasalahan air. | Aquifera';
   const author =
-    'Organisasi kemasyarakatan berbasis teknologi untuk menyelesaikan permasalahan air | Aquifera';
+    'Organisasi kemasyarakatan berbasis teknologi yang menyelesaikan permasalahan air | Aquifera';
   const metaList = [
     {
       name: `description`,
@@ -18,7 +18,7 @@ const SEO = ({ title, meta, keywords }) => {
     {
       property: `og:title`,
       content:
-        'Organisasi kemasyarakatan berbasis teknologi untuk menyelesaikan permasalahan air | Aquifera',
+        'Organisasi kemasyarakatan berbasis teknologi yang menyelesaikan permasalahan air | Aquifera',
     },
     {
       property: `og:description`,
