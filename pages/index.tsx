@@ -3,13 +3,14 @@ import styled from 'styled-components';
 
 import Button from '../components/Button';
 import Input from '../components/Input';
+import SEO from '../components/SEO';
 import { Colors } from '../enum/color.enum';
 
 const Hero = styled.section`
   position: relative;
   height: 100vh;
   padding-top: 7rem;
-  padding: 0 5%;
+  padding-left: 5%;
   background-color: ${Colors.Primary};
   color: #fff;
 
@@ -59,34 +60,6 @@ const Hero = styled.section`
       @media (max-height: 700px) {
         font-size: 5.2rem;
       }
-    }
-
-    .sponsor-container {
-      position: absolute;
-      z-index: 2;
-      right: 0;
-      bottom: 2rem;
-      align-self: flex-end;
-      margin-top: 15%;
-
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-
-      p {
-        margin-bottom: 0.8rem;
-      }
-    }
-    .img-bg {
-      position: absolute;
-      right: 0;
-      bottom: 2rem;
-      width: 10rem;
-      height: 5.5rem;
-      border-radius: 0.4rem;
-      background-color: ${Colors.Secondary};
-
-      transform: translateX(-3rem);
     }
   }
 `;
@@ -375,6 +348,7 @@ const Contribution = styled.section`
 export default function Home() {
   return (
     <>
+      <SEO title='Home' />
       <Hero>
         <img src='/svg/home-bg-1.svg' alt='' className='img-background' />
         <div className='icon-container'>
@@ -394,18 +368,6 @@ export default function Home() {
             </h1>
             <Button>Pelajari Lebih Lanjut</Button>
           </div>
-          <div className='sponsor-container'>
-            <p>AQUIFERA DIDUKUNG OLEH</p>
-            <div>
-              <Image
-                src='/png/home-mtt.png'
-                alt='logo mtt telkom'
-                height={55}
-                width={100}
-              />
-            </div>
-          </div>
-          <div className='img-bg'></div>
         </div>
       </Hero>
 
