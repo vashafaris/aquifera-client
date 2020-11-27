@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import styled from 'styled-components';
 
 import { Colors } from '../../../enum/color.enum';
@@ -100,20 +101,19 @@ const Footer = () => {
 
       <ul>
         <li>
-          <a href='https://www.youtube.com/watch?v=1Uy5nhjXrHU' target='_blank'>
-            <p>Mengapa Air</p>
-          </a>
+          <Link href='/mengapa-air'>
+            <a>
+              <p>Mengapa Air</p>
+            </a>
+          </Link>
         </li>
         <li>
-          <a
-            href='https://www.facebook.com/Aquifer-Nusantara-114754037059244'
-            target='_blank'
-          >
+          <a href=''>
             <p>Pencapaian Kami</p>
           </a>
         </li>
         <li>
-          <a href='https://www.instagram.com/aquifera_id/' target='_blank'>
+          <a href=''>
             <p>Tentang Kami</p>
           </a>
         </li>
