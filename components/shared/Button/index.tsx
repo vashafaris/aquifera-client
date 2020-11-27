@@ -4,6 +4,11 @@ import { useRouter } from 'next/router';
 
 import { Colors } from '../../../enum/color.enum';
 
+interface IProps {
+  children: any;
+  href?: string;
+}
+
 const Styled = styled.button`
   padding: 0.8rem 2rem;
   margin: 0;
@@ -33,7 +38,7 @@ const Styled = styled.button`
   }
 `;
 
-const Button = ({ children, href }) => {
+const Button = ({ children, href }: IProps) => {
   const router = useRouter();
   return (
     <Link href={href ? href : router.pathname} passHref>
