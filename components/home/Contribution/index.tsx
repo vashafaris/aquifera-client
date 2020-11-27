@@ -47,7 +47,6 @@ const Styled = styled.section`
       flex: 1;
 
       p {
-        font-size: 2rem;
         line-height: 161%;
       }
     }

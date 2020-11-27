@@ -42,6 +42,10 @@ const Styled = styled.footer`
         span {
           margin-left: 1.2rem;
           font-size: 1.2rem;
+
+          @media (max-width: 1220px) {
+            display: none;
+          }
         }
       }
     }
