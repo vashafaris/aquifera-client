@@ -5,6 +5,7 @@ import '../styles/font.css';
 import useDevices from '../hooks/useDevices';
 import Mobile from '../components/shared/Mobile';
 import Footer from '../components/shared/Footer';
+import Layout from '../components/shared/Layout';
 
 function MyApp({ Component, pageProps }) {
   const currentDevice = useDevices();
@@ -25,9 +26,9 @@ function MyApp({ Component, pageProps }) {
         <link rel='icon' href='/svg/aquifera-logo.svg' />
       </Head>
       <GlobalStyle />
-      <Header />
-      <Component {...pageProps} />
-      <Footer />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </>
   );
 }

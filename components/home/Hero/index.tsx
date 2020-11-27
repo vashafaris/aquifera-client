@@ -1,8 +1,12 @@
+import Image from 'next/image';
+import Link from 'next/link';
 import styled from 'styled-components';
 
 import { Colors } from '../../../enum/color.enum';
 
-export default styled.section`
+import Button from '../../shared/Button';
+
+const Styled = styled.section`
   position: relative;
   height: 100vh;
   padding-top: 7rem;
@@ -49,13 +53,31 @@ export default styled.section`
     }
 
     h1 {
-      font-size: 6.4rem;
+      font-size: 5.2rem;
       font-weight: bold;
       margin: 1.2rem 0;
-
-      @media (max-height: 700px) {
-        font-size: 5.2rem;
-      }
     }
   }
 `;
+
+const Hero = () => (
+  <Styled>
+    <img src='/svg/home-bg-1.svg' alt='' className='img-background' />
+    <div className='icon-container'>
+      <div className='img-container'>
+        <Image src='/svg/home-water-icon.svg' alt='water icon' layout='fill' />
+      </div>
+    </div>
+    <div className='info-container'>
+      <div className='main-container'>
+        <p>FAKTANYA</p>
+        <h1>
+          2 dari 10 orang Indonesia kesulitan dalam mengakses air bersih.{' '}
+        </h1>
+        <Button href='/mengapa-air'>Pelajari Lebih Lanjut</Button>
+      </div>
+    </div>
+  </Styled>
+);
+
+export default Hero;

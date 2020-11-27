@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Colors } from '../../../enum/color.enum';
 
-export default styled.section`
+const Styled = styled.section`
   position: relative;
   min-height: 5.5rem;
   background-color: #fff;
@@ -111,3 +111,48 @@ export default styled.section`
     }
   }
 `;
+
+const Village = () => {
+  return (
+    <Styled>
+      <img
+        src='/svg/home-bg-2.svg'
+        alt='background image'
+        className='line-bg'
+      />
+      <div className='container'>
+        <div className='img-container'>
+          <img
+            src='/svg/home-bg-rd-2.svg'
+            alt='background image'
+            className='img-bg-rd'
+          />
+          <img
+            src='/png/home-village.png'
+            alt='desa mekarlaksana'
+            className='village-img'
+          />
+          <div className='img-bg'></div>
+          <div className='text-bg'></div>
+        </div>
+        <div className='info-container'>
+          <h4>PILOT PROJECT</h4>
+          <h2>
+            Harapan untuk Desa
+            <br />
+            Mekarlaksana
+          </h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium
+            nisl morbi dictumst sed tincidunt consectetur congue nulla. Sed quis
+            ornare eu augue consequat turpis eget volutpat. Habitasse velit
+            laoreet urna, cursus lorem at et etiam justo.{' '}
+          </p>
+          <a href=''>Pelajari Lebih Lanjut</a>
+        </div>
+      </div>
+    </Styled>
+  );
+};
+
+export default Village;

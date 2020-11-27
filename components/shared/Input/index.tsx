@@ -6,7 +6,7 @@ interface IProps {
   margin: string;
 }
 
-const Input = styled.input.attrs((props) => ({
+const Styled = styled.input.attrs((props) => ({
   type: 'text',
   placeholder: props.placeholder,
 }))`
@@ -20,6 +20,8 @@ const Input = styled.input.attrs((props) => ({
   width: ${(props) => (props.width ? props.width : 'fit-content')};
 `;
 
-export default ({ placeholder, width, margin }: IProps) => {
-  return <Input placeholder={placeholder} width={width} />;
+const Input = ({ placeholder, width, margin }: IProps) => {
+  return <Styled placeholder={placeholder} width={width} />;
 };
+
+export default Input;

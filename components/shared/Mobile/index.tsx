@@ -1,9 +1,9 @@
 import Image from 'next/image';
-
 import styled from 'styled-components';
+
 import { Colors } from '../../../enum/color.enum';
 
-const Container = styled.div`
+const Styled = styled.div`
   padding: 2rem;
   min-height: 100vh;
   background-color: ${Colors.Primary};
@@ -37,7 +37,7 @@ const Container = styled.div`
 
 const Mobile = () => {
   return (
-    <Container>
+    <Styled>
       <img src='/svg/aquifera.svg' alt='logo aquifera' />
       <ul>
         <li>
@@ -78,7 +78,7 @@ const Mobile = () => {
         Untuk sementara versi <strong>mobile</strong> belum tersedia,Harap akses
         melalui <strong>desktop/laptop</strong>.
       </p>
-    </Container>
+    </Styled>
   );
 };
 

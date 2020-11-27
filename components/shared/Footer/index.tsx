@@ -3,17 +3,22 @@ import styled from 'styled-components';
 
 import { Colors } from '../../../enum/color.enum';
 
-const Footer = styled.footer`
+const Styled = styled.footer`
   position: relative;
-  padding: 1.2rem;
-  height: 24rem;
+  padding: 2.4rem;
+  height: 32rem;
   background-color: ${Colors.Primary};
   color: #fff;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+
+  .logo-container {
+    display: flex;
+    flex-direction: column;
+  }
 
   ul {
     list-style-type: none;
@@ -22,7 +27,22 @@ const Footer = styled.footer`
     align-items: center;
 
     li {
-      margin: 2.4rem 2.4rem;
+      margin: 0rem 2.4rem;
+
+      p {
+        font-size: 1.6rem;
+        font-weight: 600;
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+
+        span {
+          margin-left: 1.2rem;
+          font-size: 1.2rem;
+        }
+      }
     }
   }
 
@@ -58,29 +78,47 @@ const Footer = styled.footer`
       transform: translateX(-3rem);
     }
   }
-
-  .img-bg {
-    position: absolute;
-    right: 0;
-    bottom: 2rem;
-    width: 10rem;
-    height: 5.5rem;
-    border-radius: 0.4rem;
-    background-color: ${Colors.Secondary};
-
-    transform: translateX(-3rem);
-  }
 `;
 
-export default () => {
+const Footer = () => {
   return (
-    <Footer>
-      <Image
-        src='/svg/aquifera.svg'
-        alt='logo aquifera'
-        width={250}
-        height={65}
-      />
+    <Styled>
+      <div className='logo-container'>
+        <Image
+          src='/svg/aquifera-logo.svg'
+          alt='logo aquifera'
+          width={250}
+          height={65}
+        />
+        <Image
+          src='/svg/aquifera.svg'
+          alt='logo aquifera'
+          width={250}
+          height={24}
+        />
+      </div>
+
+      <ul>
+        <li>
+          <a href='https://www.youtube.com/watch?v=1Uy5nhjXrHU' target='_blank'>
+            <p>Mengapa Air</p>
+          </a>
+        </li>
+        <li>
+          <a
+            href='https://www.facebook.com/Aquifer-Nusantara-114754037059244'
+            target='_blank'
+          >
+            <p>Pencapaian Kami</p>
+          </a>
+        </li>
+        <li>
+          <a href='https://www.instagram.com/aquifera_id/' target='_blank'>
+            <p>Tentang Kami</p>
+          </a>
+        </li>
+      </ul>
+
       <ul>
         <li>
           <a href='https://www.youtube.com/watch?v=1Uy5nhjXrHU' target='_blank'>
@@ -90,6 +128,7 @@ export default () => {
               width={36}
               height={36}
             />
+            <span>Aquifera ID</span>
           </a>
         </li>
         <li>
@@ -103,6 +142,7 @@ export default () => {
               width={24}
               height={24}
             />
+            <span>Aquifer Nusantara</span>
           </a>
         </li>
         <li>
@@ -113,9 +153,17 @@ export default () => {
               width={24}
               height={24}
             />
+            <span>aquifera_id</span>
+          </a>
+        </li>
+        <li>
+          <a href='mailto:aquifernusantara@gmail.com'>
+            <Image src='/svg/mail.svg' alt='mail' width={24} height={24} />
+            <span>aquifernusantara@gmail.com</span>
           </a>
         </li>
       </ul>
+
       <p>&copy; Aquifera 2020</p>
 
       <div className='sponsor-container'>
@@ -129,8 +177,8 @@ export default () => {
           />
         </div>
       </div>
-
-      {/* <div className='img-bg'></div> */}
-    </Footer>
+    </Styled>
   );
 };
+
+export default Footer;

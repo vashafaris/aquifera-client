@@ -1,9 +1,10 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import styled from 'styled-components';
 
 import { Colors } from '../../../enum/color.enum';
 
-const Header = styled.header`
+const Styled = styled.header`
   z-index: 10;
   position: fixed;
   top: 0;
@@ -62,24 +63,28 @@ const Header = styled.header`
   }
 `;
 
-export default () => {
+const Header = () => {
   return (
-    <Header>
+    <Styled>
       <nav>
         <div className='block--left'>
-          <a href='' className='logo'>
-            <Image
-              src='/svg/aquifera.svg'
-              alt='logo aquifera'
-              width={150}
-              height={50}
-            />
-          </a>
+          <Link href='/'>
+            <a className='logo'>
+              <Image
+                src='/svg/aquifera.svg'
+                alt='logo aquifera'
+                width={150}
+                height={50}
+              />
+            </a>
+          </Link>
         </div>
         <div className='block--right'>
           <ul>
             <li>
-              <a href=''>Mengapa Air ?</a>
+              <Link href='/mengapa-air'>
+                <a>Mengapa Air ?</a>
+              </Link>
             </li>
             <li>
               <a href=''>Pencapaian Kami</a>
@@ -90,6 +95,8 @@ export default () => {
           </ul>
         </div>
       </nav>
-    </Header>
+    </Styled>
   );
 };
+
+export default Header;

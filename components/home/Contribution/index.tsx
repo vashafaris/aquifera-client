@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 
 import { Colors } from '../../../enum/color.enum';
+import Button from '../../shared/Button';
+import Input from '../../shared/Input';
 
-export default styled.section`
+const Styled = styled.section`
   position: relative;
   padding: 0 10%;
 
@@ -60,7 +62,7 @@ export default styled.section`
       align-items: center;
 
       h4 {
-        font-size: 4.8rem;
+        font-size: 3.6rem;
         letter-spacing: -2%;
         line-height: 130%;
       }
@@ -81,3 +83,35 @@ export default styled.section`
     justify-content: center;
   }
 `;
+
+const Contribution = () => {
+  return (
+    <Styled>
+      <h2>Kontribusi Kami</h2>
+      <div className='container'>
+        <div className='info-container'>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium
+            nisl morbi dictumst sed tincidunt consectetur congue nulla. Sed quis
+            ornare eu augue consequat turpis eget volutpat. Habitasse velit
+            laoreet urna, cursus lorem at et etiam justo. Faucibus vitae magna
+            leo semper lacus pulvinar cursus.
+          </p>
+        </div>
+        <div className='detail-container'>
+          <h4>20.000</h4>
+          <p>Masyarakat</p>
+          <h4>2160</h4>
+          <p>L/Jam</p>
+        </div>
+      </div>
+      <div className='email-container'>
+        <h3>Ingin Membantu Kami?</h3>
+        <Input placeholder='Alamat Email' width='30%' margin={'.8rem 0'} />
+        <Button>Donasi</Button>
+      </div>
+    </Styled>
+  );
+};
+
+export default Contribution;

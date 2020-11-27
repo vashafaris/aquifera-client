@@ -1,12 +1,20 @@
 import styled from 'styled-components';
 
-const Container = styled.main`
+import Footer from '../Footer';
+import Header from '../Header';
+
+const Styled = styled.main`
   min-height: calc(100vh - 7rem);
-  margin-top: 7rem;
 `;
 
 const Layout = ({ children }) => {
-  return <Container>{children}</Container>;
+  return (
+    <Styled>
+      <Header />
+      {children}
+      <Footer />
+    </Styled>
+  );
 };
 
 export default Layout;

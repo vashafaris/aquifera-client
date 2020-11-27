@@ -1,7 +1,10 @@
+import Link from 'next/link';
 import styled from 'styled-components';
+import { useRouter } from 'next/router';
+
 import { Colors } from '../../../enum/color.enum';
 
-const Button = styled.button`
+const Styled = styled.button`
   padding: 0.8rem 2rem;
   margin: 0;
   min-width: 24rem;
@@ -30,6 +33,13 @@ const Button = styled.button`
   }
 `;
 
-export default ({ children }) => {
-  return <Button>{children}</Button>;
+const Button = ({ children, href }) => {
+  const router = useRouter();
+  return (
+    <Link href={href ? href : router.pathname} passHref>
+      <Styled>{children}</Styled>
+    </Link>
+  );
 };
+
+export default Button;
