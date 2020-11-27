@@ -1,10 +1,10 @@
 import Head from 'next/head';
-import Header from '../components/Header';
+import Header from '../components/shared/Header';
 import GlobalStyle from '../styles/global';
 import '../styles/font.css';
 import useDevices from '../hooks/useDevices';
-import Mobile from '../components/Mobile';
-import Footer from '../components/Footer';
+import Mobile from '../components/shared/Mobile';
+import Footer from '../components/shared/Footer';
 
 function MyApp({ Component, pageProps }) {
   const currentDevice = useDevices();
@@ -22,7 +22,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <title>Aquifera</title>
-        {/* <link rel='icon' href='/vercel.svg' /> */}
+        <link rel='icon' href='/svg/aquifera-logo.svg' />
       </Head>
       <GlobalStyle />
       <Header />

@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 import styled from 'styled-components';
-import { Colors } from '../../enum/color.enum';
+import { Colors } from '../../../enum/color.enum';
 
 const Container = styled.div`
   padding: 2rem;

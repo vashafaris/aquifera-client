@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Colors } from '../../enum/color.enum';
+import { Colors } from '../../../enum/color.enum';
 
 const Button = styled.button`
   padding: 0.8rem 2rem;
