@@ -6,6 +6,7 @@ const Styled = styled.div`
   padding-top: 7rem;
   background-color: ${Colors.Primary};
   color: #fff;
+  border-bottom: 1px solid ${Colors.Secondary};
 
   display: flex;
   align-items: center;

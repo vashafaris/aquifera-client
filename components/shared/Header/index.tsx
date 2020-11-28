@@ -87,7 +87,9 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <a href=''>Pencapaian Kami</a>
+              <Link href='/pencapaian-kami'>
+                <a href=''>Pencapaian Kami</a>
+              </Link>
             </li>
             <li>
               <a href=''>Tentang Kami</a>

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styled from 'styled-components';
 import { Colors } from '../../../enum/color.enum';
 
@@ -148,7 +149,9 @@ const Village = () => {
             ornare eu augue consequat turpis eget volutpat. Habitasse velit
             laoreet urna, cursus lorem at et etiam justo.{' '}
           </p>
-          <a href=''>Pelajari Lebih Lanjut</a>
+          <Link href='/pencapaian-kami'>
+            <a>Pelajari Lebih Lanjut</a>
+          </Link>
         </div>
       </div>
     </Styled>
