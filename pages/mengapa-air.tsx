@@ -1,5 +1,3 @@
-import React from 'react';
-
 import SMengapaAir from '../components/mengapa-air';
 
 import SEO from '../components/shared/SEO';

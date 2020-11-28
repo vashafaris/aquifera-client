@@ -88,11 +88,13 @@ const Header = () => {
             </li>
             <li>
               <Link href='/pencapaian-kami'>
-                <a href=''>Pencapaian Kami</a>
+                <a>Pencapaian Kami</a>
               </Link>
             </li>
             <li>
-              <a href=''>Tentang Kami</a>
+              <Link href='/tentang-kami'>
+                <a>Tentang Kami</a>
+              </Link>
             </li>
           </ul>
         </div>

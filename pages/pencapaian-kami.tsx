@@ -1,5 +1,5 @@
-import React from 'react';
 import SPencapaianKami from '../components/pencapaian-kami';
+
 import SEO from '../components/shared/SEO';
 import Title from '../components/shared/Title';
 
