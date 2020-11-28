@@ -27,7 +27,6 @@ const Styled = styled.section`
     &__title {
       position: absolute;
       width: 25%;
-      color: ${Colors.Primary};
 
       display: flex;
       flex-direction: column;
@@ -35,7 +34,7 @@ const Styled = styled.section`
       &__line {
         margin: 0.4rem 0;
         width: 3.2rem;
-        border-bottom: 1px solid ${Colors.Primary};
+        border-bottom: 1px solid #000;
       }
     }
 

@@ -5,7 +5,7 @@ import { Colors } from '../../../enum/color.enum';
 
 const Styled = styled.section`
   position: relative;
-  min-height: 100vh;
+  min-height: 60vh;
   padding: 0 10%;
 
   display: flex;
@@ -22,8 +22,6 @@ const Styled = styled.section`
   h2 {
     font-size: 4.8rem;
     font-weight: bold;
-    letter-spacing: -2%;
-    margin-bottom: 2.4rem;
 
     ::before {
       content: '';
@@ -48,46 +46,50 @@ const Styled = styled.section`
     }
   }
 
-  .list-container {
-    display: flex;
-    flex-wrap: wrap;
+  .container {
+    padding: 4.8rem 0;
 
-    .item-container {
-      margin: 0 auto;
-      flex-basis: 40%;
-      flex-shrink: 0;
-      flex-grow: 0;
-
-      @media (max-width: 1306px) {
-        flex-basis: 50%;
-      }
-
-      padding: 4rem;
-      color: ${Colors.Primary};
-
+    .list-container {
       display: flex;
+      flex-wrap: wrap;
 
-      .icon-container {
-        margin-right: 1.6rem;
-      }
+      .item-container {
+        margin: 0 auto;
+        flex-basis: 40%;
+        flex-shrink: 0;
+        flex-grow: 0;
 
-      .info-container {
-        h4 {
-          font-size: 2.4rem;
-          font-weight: bold;
-          margin-bottom: 1.2rem;
+        @media (max-width: 1306px) {
+          flex-basis: 50%;
         }
 
-        p {
-          width: 100%;
-          font-weight: 200;
-          line-height: 161%;
+        padding: 2rem 4rem;
+        color: ${Colors.Primary};
+
+        display: flex;
+
+        .icon-container {
+          margin-right: 1.6rem;
         }
 
-        .--important {
-          font-size: 1.2rem;
-          font-weight: bold;
-          width: 100%;
+        .info-container {
+          h4 {
+            font-size: 2.4rem;
+            font-weight: bold;
+            margin-bottom: 1.2rem;
+          }
+
+          p {
+            width: 100%;
+            font-weight: 200;
+            line-height: 161%;
+          }
+
+          .--important {
+            font-size: 1.2rem;
+            font-weight: bold;
+            width: 100%;
+          }
         }
       }
     }
@@ -98,77 +100,79 @@ const Commitment = () => {
   return (
     <Styled>
       <h2>Komitmen Kami</h2>
-      <div className='list-container'>
-        <div className='item-container'>
-          <div className='icon-container'>
-            <Image
-              src='/svg/money-icon.svg'
-              alt='logo uang'
-              width={54}
-              height={42}
-            />
+      <div className='container'>
+        <div className='list-container'>
+          <div className='item-container'>
+            <div className='icon-container'>
+              <Image
+                src='/svg/money-icon.svg'
+                alt='logo uang'
+                width={54}
+                height={42}
+              />
+            </div>
+            <div className='info-container'>
+              <h4>Donasi 100%</h4>
+              <p>
+                Dana donasi tersalurkan sepenuhnya untuk kegiatan pengadaan air.
+              </p>
+              <p className='--important'>
+                *Kegiatan operasional telah ditanggung oleh donatur.
+              </p>
+            </div>
           </div>
-          <div className='info-container'>
-            <h4>Donasi 100%</h4>
-            <p>
-              Dana donasi tersalurkan sepenuhnya untuk kegiatan pengadaan air.
-            </p>
-            <p className='--important'>
-              *Kegiatan operasional telah ditanggung oleh donatur.
-            </p>
-          </div>
-        </div>
-        <div className='item-container'>
-          <div className='icon-container'>
-            <Image
-              src='/svg/target-icon.svg'
-              alt='logo uang'
-              width={64}
-              height={64}
-            />
-          </div>
-          <div className='info-container'>
-            <h4>Teknologi Tepat Guna</h4>
-            <p>
-              Solusi teknologi yang digunakan menyesuaikan dengan permasalahan
-              di setiap daerah.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div className='list-container'>
-        <div className='item-container'>
-          <div className='icon-container'>
-            <Image
-              src='/svg/people-icon.svg'
-              alt='logo uang'
-              width={64}
-              height={64}
-            />
-          </div>
-          <div className='info-container'>
-            <h4>Akuntabilitas</h4>
-            <p>
-              Semua projek yang ada dibuktikan dengan hasil dan data real-time
-              dengan bantuan teknologi Internet of Things (IoT)
-            </p>
+          <div className='item-container'>
+            <div className='icon-container'>
+              <Image
+                src='/svg/target-icon.svg'
+                alt='logo uang'
+                width={64}
+                height={64}
+              />
+            </div>
+            <div className='info-container'>
+              <h4>Teknologi Tepat Guna</h4>
+              <p>
+                Solusi teknologi yang digunakan menyesuaikan dengan permasalahan
+                di setiap daerah.
+              </p>
+            </div>
           </div>
         </div>
-        <div className='item-container'>
-          <div className='icon-container'>
-            <Image
-              src='/svg/clock-icon.svg'
-              alt='logo uang'
-              width={64}
-              height={64}
-            />
+        <div className='list-container'>
+          <div className='item-container'>
+            <div className='icon-container'>
+              <Image
+                src='/svg/people-icon.svg'
+                alt='logo uang'
+                width={64}
+                height={64}
+              />
+            </div>
+            <div className='info-container'>
+              <h4>Akuntabilitas</h4>
+              <p>
+                Semua projek yang ada dibuktikan dengan hasil dan data real-time
+                dengan bantuan teknologi Internet of Things (IoT)
+              </p>
+            </div>
           </div>
-          <div className='info-container'>
-            <h4>Program Berkelanjutan</h4>
-            <p>
-              Bekerjasama dengan organisasi setempat dan local-champion dalam
-              mengusahakan keberlanjutan
-            </p>
+          <div className='item-container'>
+            <div className='icon-container'>
+              <Image
+                src='/svg/clock-icon.svg'
+                alt='logo uang'
+                width={64}
+                height={64}
+              />
+            </div>
+            <div className='info-container'>
+              <h4>Program Berkelanjutan</h4>
+              <p>
+                Bekerjasama dengan organisasi setempat dan local-champion dalam
+                mengusahakan keberlanjutan
+              </p>
+            </div>
           </div>
         </div>
       </div>

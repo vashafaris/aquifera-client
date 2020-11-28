@@ -112,14 +112,18 @@ const Footer = () => {
           </Link>
         </li>
         <li>
-          <a href=''>
-            <p>Pencapaian Kami</p>
-          </a>
+          <Link href='/pencapaian-kami'>
+            <a>
+              <p>Pencapaian Kami</p>
+            </a>
+          </Link>
         </li>
         <li>
-          <a href=''>
-            <p>Tentang Kami</p>
-          </a>
+          <Link href='/tentang-kami'>
+            <a>
+              <p>Tentang Kami</p>
+            </a>
+          </Link>
         </li>
       </ul>
 
