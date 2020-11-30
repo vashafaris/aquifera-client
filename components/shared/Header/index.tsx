@@ -28,7 +28,7 @@ const Styled = styled.header`
     align-items: center;
 
     .block--left {
-      flex: 4;
+      flex: 0.4;
 
       display: flex;
       justify-content: center;
@@ -39,7 +39,7 @@ const Styled = styled.header`
     }
 
     .block--right {
-      flex: 6;
+      flex: 0.6;
       white-space: nowrap;
 
       ul {
@@ -49,6 +49,7 @@ const Styled = styled.header`
         justify-content: flex-end;
 
         li {
+          font-size: 1.4rem;
           padding: 0.8rem 0;
           margin: 0 4%;
           border-bottom: 3px solid ${Colors.Primary};
