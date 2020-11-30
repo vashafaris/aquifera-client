@@ -50,13 +50,16 @@ const Styled = styled.header`
 
         li {
           font-size: 1.4rem;
-          padding: 0.8rem 0;
           margin: 0 4%;
-          border-bottom: 3px solid ${Colors.Primary};
-          transition: 0.3s;
 
-          :hover {
-            border-bottom: 3px solid ${Colors.Secondary};
+          a {
+            padding: 0.8rem 0;
+            border-bottom: 3px solid ${Colors.Primary};
+            transition: 0.3s;
+
+            :hover {
+              border-bottom: 3px solid ${Colors.Secondary};
+            }
           }
         }
       }
