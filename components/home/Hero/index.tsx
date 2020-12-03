@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 import { Colors } from '../../../enum/color.enum';
 
@@ -60,13 +60,26 @@ const Styled = styled.section`
   }
 `;
 
+const containerVariants = {
+  initial: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 2,
+      ease: [0.6, 0.05, -0.01, 0.9],
+    },
+  },
+};
+
 const Hero = () => (
   <Styled>
     <img src='/svg/home-bg-1.svg' alt='' className='img-background' />
     <div className='icon-container'>
-      <div className='img-container'>
+      <motion.div className='img-container' variants={containerVariants}>
         <Image src='/svg/home-water-icon.svg' alt='water icon' layout='fill' />
-      </div>
+      </motion.div>
     </div>
     <div className='info-container'>
       <div className='main-container'>

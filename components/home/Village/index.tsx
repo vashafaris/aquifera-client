@@ -1,6 +1,10 @@
 import Link from 'next/link';
 import styled from 'styled-components';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+
 import { Colors } from '../../../enum/color.enum';
+import { useEffect } from 'react';
 
 const Styled = styled.section`
   position: relative;
@@ -114,8 +118,122 @@ const Styled = styled.section`
 `;
 
 const Village = () => {
+  const [contentRef, inView] = useInView({
+    triggerOnce: false,
+    threshold: 0.4,
+  });
+
+  const imgBgRdAnimation = useAnimation();
+  const imgBgRdInitialState = {
+    opacity: 0,
+  };
+  const imgBgRdAnimate = {
+    opacity: 1,
+    transition: { delay: 1, duration: 1 },
+  };
+
+  const imgAnimation = useAnimation();
+  const imgInitialState = {
+    opacity: 0,
+    y: '30vh',
+  };
+  const imgAnimate = {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 2 },
+  };
+
+  const imgBgAnimation = useAnimation();
+  const imgBgInitialState = {
+    opacity: 0,
+    x: 10,
+    y: '20vh',
+  };
+  const imgBgAnimate = {
+    opacity: 1,
+    y: 10,
+    transition: { duration: 2 },
+  };
+
+  const textBgAnimation = useAnimation();
+  const textBgInitialState = {
+    opacity: 0,
+    width: 0,
+    originX: 0,
+    originY: 0,
+  };
+  const textBgAnimate = {
+    opacity: 1,
+    width: '27rem',
+    transition: { duration: 2 },
+  };
+
+  const infoAnimation = useAnimation();
+  const infoInitialState = {
+    opacity: 0,
+    y: '20vh',
+  };
+  const infoAnimate = {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 1.5 },
+  };
+
+  const titleAnimation = useAnimation();
+  const titleInitialState = {
+    opacity: 0,
+    y: '20vh',
+  };
+  const titleAnimate = {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 1.5 },
+  };
+
+  const descAnimation = useAnimation();
+  const descInitialState = {
+    opacity: 0,
+    y: '20vh',
+  };
+  const descAnimate = {
+    opacity: 1,
+    y: 0,
+    transition: { delay: 0.2, duration: 1.5 },
+  };
+
+  const btnAnimation = useAnimation();
+  const btnInitialState = {
+    opacity: 0,
+    y: '20vh',
+  };
+  const btnAnimate = {
+    opacity: 1,
+    y: 0,
+    transition: { delay: 0.4, duration: 1.5 },
+  };
+
+  useEffect(() => {
+    if (inView) {
+      imgBgRdAnimation.start(imgBgRdAnimate);
+
+      imgAnimation.start(imgAnimate);
+
+      imgBgAnimation.start(imgBgAnimate);
+
+      textBgAnimation.start(textBgAnimate);
+
+      infoAnimation.start(infoAnimate);
+
+      titleAnimation.start(titleAnimate);
+
+      descAnimation.start(descAnimate);
+
+      btnAnimation.start(btnAnimate);
+    }
+  }, [inView]);
+
   return (
-    <Styled>
+    <Styled ref={contentRef}>
       <img
         src='/svg/home-bg-2.svg'
         alt='background image'
@@ -123,35 +241,51 @@ const Village = () => {
       />
       <div className='container'>
         <div className='img-container'>
-          <img
+          <motion.img
             src='/svg/home-bg-rd-2.svg'
             alt='background image'
             className='img-bg-rd'
+            initial={imgBgRdInitialState}
+            animate={imgBgRdAnimation}
           />
-          <img
+          <motion.img
             src='/png/home-village.png'
             alt='desa mekarlaksana'
             className='village-img'
+            animate={imgAnimation}
+            initial={imgInitialState}
           />
-          <div className='img-bg'></div>
-          <div className='text-bg'></div>
+          <motion.div
+            className='img-bg'
+            initial={imgBgInitialState}
+            animate={imgBgAnimation}
+          ></motion.div>
+          <motion.div
+            className='text-bg'
+            initial={textBgInitialState}
+            animate={textBgAnimation}
+          ></motion.div>
         </div>
         <div className='info-container'>
-          <h4>PILOT PROJECT</h4>
-          <h2>
+          <motion.h4 initial={infoInitialState} animate={infoAnimation}>
+            PILOT PROJECT
+          </motion.h4>
+          <motion.h2 initial={titleInitialState} animate={titleAnimation}>
             Harapan untuk Desa
             <br />
             Mekarlaksana
-          </h2>
-          <p>
+          </motion.h2>
+          <motion.p initial={descInitialState} animate={descAnimation}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium
             nisl morbi dictumst sed tincidunt consectetur congue nulla. Sed quis
             ornare eu augue consequat turpis eget volutpat. Habitasse velit
             laoreet urna, cursus lorem at et etiam justo.{' '}
-          </p>
-          <Link href='/pencapaian-kami'>
-            <a>Pelajari Lebih Lanjut</a>
-          </Link>
+          </motion.p>
+          <motion.div initial={btnInitialState} animate={btnAnimation}>
+            <Link href='/pencapaian-kami'>
+              <a>Pelajari Lebih Lanjut</a>
+            </Link>
+          </motion.div>
         </div>
       </div>
     </Styled>
