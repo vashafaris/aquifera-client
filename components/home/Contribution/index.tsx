@@ -1,4 +1,7 @@
 import styled from 'styled-components';
+import { useEffect } from 'react';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 import { Colors } from '../../../enum/color.enum';
 import Button from '../../shared/Button';
@@ -84,10 +87,68 @@ const Styled = styled.section`
 `;
 
 const Contribution = () => {
+  const [contentRef, inView] = useInView({
+    triggerOnce: false,
+    threshold: 0.2,
+  });
+
+  const titleAnimation = useAnimation();
+  const titleInitialState = {
+    opacity: 0,
+  };
+  const titleAnimate = {
+    opacity: 1,
+    transition: {
+      duration: 1,
+    },
+  };
+
+  const containerAnimation = useAnimation();
+  const containerInitialState = {
+    opacity: 0,
+    y: '20vh',
+  };
+  const containerAnimate = {
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.2,
+      duration: 1,
+    },
+  };
+
+  const donationAnimation = useAnimation();
+  const donationInitialState = {
+    opacity: 0,
+  };
+  const donationAnimate = {
+    opacity: 1,
+    transition: {
+      delay: 0.4,
+      duration: 1.2,
+    },
+  };
+
+  useEffect(() => {
+    if (inView) {
+      titleAnimation.start(titleAnimate);
+
+      containerAnimation.start(containerAnimate);
+
+      donationAnimation.start(donationAnimate);
+    }
+  }, [inView]);
+
   return (
-    <Styled>
-      <h2>Kontribusi Kami</h2>
-      <div className='container'>
+    <Styled ref={contentRef}>
+      <motion.h2 initial={titleInitialState} animate={titleAnimation}>
+        Kontribusi Kami
+      </motion.h2>
+      <motion.div
+        className='container'
+        initial={containerInitialState}
+        animate={containerAnimation}
+      >
         <div className='info-container'>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium
@@ -103,12 +164,16 @@ const Contribution = () => {
           <h4>2160</h4>
           <p>L/Jam</p>
         </div>
-      </div>
-      <div className='email-container'>
+      </motion.div>
+      <motion.div
+        className='email-container'
+        initial={donationInitialState}
+        animate={donationAnimation}
+      >
         <h3>Ingin Membantu Kami?</h3>
         <Input placeholder='Alamat Email' width='30%' margin={'.8rem 0'} />
         <Button>Donasi</Button>
-      </div>
+      </motion.div>
     </Styled>
   );
 };

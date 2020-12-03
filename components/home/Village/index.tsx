@@ -1,10 +1,10 @@
+import { useEffect } from 'react';
 import Link from 'next/link';
 import styled from 'styled-components';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 import { Colors } from '../../../enum/color.enum';
-import { useEffect } from 'react';
 
 const Styled = styled.section`
   position: relative;
@@ -73,12 +73,12 @@ const Styled = styled.section`
       .text-bg {
         position: absolute;
         top: 0;
-        right: 0;
-        width: 27rem;
+        right: -1rem;
+        width: 2rem;
         height: 5.2rem;
         background-color: ${Colors.Secondary};
 
-        transform: translate(27rem, 3.8rem);
+        transform: translate(26rem, 3.8rem);
       }
     }
 
@@ -120,7 +120,7 @@ const Styled = styled.section`
 const Village = () => {
   const [contentRef, inView] = useInView({
     triggerOnce: false,
-    threshold: 0.4,
+    threshold: 0.2,
   });
 
   const imgBgRdAnimation = useAnimation();
@@ -140,7 +140,7 @@ const Village = () => {
   const imgAnimate = {
     opacity: 1,
     y: 0,
-    transition: { duration: 2 },
+    transition: { duration: 2.5 },
   };
 
   const imgBgAnimation = useAnimation();
@@ -161,11 +161,13 @@ const Village = () => {
     width: 0,
     originX: 0,
     originY: 0,
+    transform: 'translate(0rem, 3.8rem)',
   };
   const textBgAnimate = {
     opacity: 1,
-    width: '27rem',
-    transition: { duration: 2 },
+    width: '26rem',
+    transform: 'translate(26rem, 3.8rem)',
+    transition: { delay: 0.4, duration: 1.2 },
   };
 
   const infoAnimation = useAnimation();
@@ -198,7 +200,7 @@ const Village = () => {
   const descAnimate = {
     opacity: 1,
     y: 0,
-    transition: { delay: 0.2, duration: 1.5 },
+    transition: { delay: 0.2, duration: 1.3 },
   };
 
   const btnAnimation = useAnimation();
@@ -209,7 +211,7 @@ const Village = () => {
   const btnAnimate = {
     opacity: 1,
     y: 0,
-    transition: { delay: 0.4, duration: 1.5 },
+    transition: { delay: 0.4, duration: 1.1 },
   };
 
   useEffect(() => {

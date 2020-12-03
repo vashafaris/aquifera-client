@@ -1,5 +1,8 @@
 import Image from 'next/image';
 import styled from 'styled-components';
+import { useEffect } from 'react';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 import { Colors } from '../../../enum/color.enum';
 
@@ -32,7 +35,8 @@ const Styled = styled.section`
       width: calc(27.5rem + 10%);
       height: 5.2rem;
       background-color: ${Colors.Secondary};
-      transform: translateY(0.2rem);
+      /* transform: translateY(0.2rem); */
+      transform: var(--before-x);
     }
 
     ::after {
@@ -97,11 +101,71 @@ const Styled = styled.section`
 `;
 
 const Commitment = () => {
+  const [contentRef, inView] = useInView({
+    triggerOnce: false,
+    threshold: 0.2,
+  });
+
+  const titleAnimation = useAnimation();
+  const titleInitialState = {
+    opacity: 0,
+  };
+  const titleAnimate = {
+    opacity: 1,
+    transition: {
+      duration: 1,
+    },
+  };
+
+  const firstItemRowAnimation = useAnimation();
+  const firstItemRowInitialState = {
+    opacity: 0,
+    y: '20vh',
+  };
+  const firstItemRowAnimate = {
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.2,
+      duration: 1,
+    },
+  };
+
+  const secondItemRowAnimation = useAnimation();
+  const secondItemRowInitialState = {
+    opacity: 0,
+    y: '20vh',
+  };
+  const secondItemRowAnimate = {
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.4,
+      duration: 0.8,
+    },
+  };
+
+  useEffect(() => {
+    if (inView) {
+      titleAnimation.start(titleAnimate);
+
+      firstItemRowAnimation.start(firstItemRowAnimate);
+
+      secondItemRowAnimation.start(secondItemRowAnimate);
+    }
+  }, [inView]);
+
   return (
-    <Styled>
-      <h2>Komitmen Kami</h2>
+    <Styled ref={contentRef}>
+      <motion.h2 initial={titleInitialState} animate={titleAnimation}>
+        Komitmen Kami
+      </motion.h2>
       <div className='container'>
-        <div className='list-container'>
+        <motion.div
+          className='list-container'
+          initial={firstItemRowInitialState}
+          animate={firstItemRowAnimation}
+        >
           <div className='item-container'>
             <div className='icon-container'>
               <Image
@@ -138,8 +202,12 @@ const Commitment = () => {
               </p>
             </div>
           </div>
-        </div>
-        <div className='list-container'>
+        </motion.div>
+        <motion.div
+          className='list-container'
+          initial={secondItemRowInitialState}
+          animate={secondItemRowAnimation}
+        >
           <div className='item-container'>
             <div className='icon-container'>
               <Image
@@ -174,7 +242,7 @@ const Commitment = () => {
               </p>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
       <img src='/svg/home-bg-3.svg' alt='background image' className='img-bg' />
     </Styled>
