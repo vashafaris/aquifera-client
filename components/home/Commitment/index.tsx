@@ -127,7 +127,7 @@ const Commitment = () => {
     y: 0,
     transition: {
       delay: 0.2,
-      duration: 1,
+      duration: 1.5,
     },
   };
 
@@ -140,8 +140,8 @@ const Commitment = () => {
     opacity: 1,
     y: 0,
     transition: {
-      delay: 0.4,
-      duration: 0.8,
+      delay: 0.6,
+      duration: 1.3,
     },
   };
 

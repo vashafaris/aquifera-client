@@ -124,7 +124,7 @@ const Contribution = () => {
   const donationAnimate = {
     opacity: 1,
     transition: {
-      delay: 0.4,
+      delay: 0.8,
       duration: 1.2,
     },
   };

@@ -16,11 +16,6 @@ const Styled = styled.footer`
   align-items: center;
   justify-content: space-around;
 
-  .logo-container {
-    display: flex;
-    flex-direction: column;
-  }
-
   ul {
     list-style-type: none;
 
@@ -90,16 +85,10 @@ const Footer = () => {
     <Styled>
       <div className='logo-container'>
         <Image
-          src='/svg/aquifera-logo.svg'
+          src='/png/logo.png'
           alt='logo aquifera'
-          width={250}
-          height={65}
-        />
-        <Image
-          src='/svg/aquifera.svg'
-          alt='logo aquifera'
-          width={250}
-          height={24}
+          width={116}
+          height={99}
         />
       </div>
 
