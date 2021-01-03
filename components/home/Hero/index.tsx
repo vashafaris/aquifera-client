@@ -125,16 +125,12 @@ const Hero = () => (
     <img src='/svg/home-bg-1.svg' alt='' className='img-background' />
     <div className='icon-container'>
       <div className='img-container'>
-        {/* <Image src='/svg/home-water-icon.svg' alt='water icon' layout='fill' /> */}
-        <motion.svg
+        <svg
           width='332'
           height='435'
           viewBox='0 0 332 435'
           fill='none'
           xmlns='http://www.w3.org/2000/svg'
-          variants={svgVariants}
-          initial='hidden'
-          animate='visible'
         >
           <mask
             id='mask0'
@@ -274,24 +270,19 @@ const Hero = () => (
               <stop offset='1' stopColor='#0F4C75' />
             </linearGradient>
           </defs>
-        </motion.svg>
+        </svg>
       </div>
     </div>
     <div className='info-container'>
-      <motion.div
-        className='main-container'
-        variants={textVariants}
-        initial='hidden'
-        animate='visible'
-      >
-        <motion.p variants={childVariants}>FAKTANYA</motion.p>
-        <motion.h1 variants={childVariants}>
+      <div className='main-container'>
+        <p>FAKTANYA</p>
+        <h1>
           2 dari 10 orang Indonesia kesulitan dalam mengakses air bersih.{' '}
-        </motion.h1>
-        <motion.div variants={childVariants}>
+        </h1>
+        <div>
           <Button href='/mengapa-air'>Pelajari Lebih Lanjut</Button>
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
     </div>
   </Styled>
 );

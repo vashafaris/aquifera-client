@@ -22,12 +22,13 @@ const Styled = styled.section`
     transform: translateY(50%);
   }
 
-  h2 {
-    font-size: 4.8rem;
-    font-weight: bold;
+  .title {
+    h2 {
+      font-size: 4.8rem;
+      font-weight: bold;
+    }
 
-    ::before {
-      content: '';
+    &__bg {
       position: absolute;
       left: -0.25rem;
       z-index: -1;
@@ -35,18 +36,17 @@ const Styled = styled.section`
       width: calc(27.5rem + 10%);
       height: 5.2rem;
       background-color: ${Colors.Secondary};
-      /* transform: translateY(0.2rem); */
       transform: var(--before-x);
     }
 
-    ::after {
-      content: '';
+    &__line {
       position: absolute;
+      left: calc(44rem + 10%);
       z-index: -1;
       display: inline-block;
       width: 25%;
       border-bottom: 1px solid ${Colors.Secondary};
-      transform: translate(5%, 3rem);
+      transform: translate(0, -2.8rem);
     }
   }
 
@@ -109,12 +109,40 @@ const Commitment = () => {
   const titleAnimation = useAnimation();
   const titleInitialState = {
     opacity: 0,
+    y: '20vh',
   };
   const titleAnimate = {
     opacity: 1,
+    y: 0,
     transition: {
-      duration: 1,
+      duration: 1.5,
     },
+  };
+
+  const titleBgAnimation = useAnimation();
+  const titleBgInitialState = {
+    opacity: 0,
+    width: 0,
+    originX: 0,
+    originY: 0,
+  };
+  const titleBgAnimate = {
+    opacity: 1,
+    width: 'calc(27.5rem + 10%)',
+    transition: { delay: 0.4, duration: 1.2 },
+  };
+
+  const titleLineAnimation = useAnimation();
+  const titleLineInitialState = {
+    opacity: 0,
+    width: 0,
+    originX: 0,
+    originY: 0,
+  };
+  const titleLineAnimate = {
+    opacity: 1,
+    width: '25%',
+    transition: { delay: 1.2, duration: 1 },
   };
 
   const firstItemRowAnimation = useAnimation();
@@ -149,6 +177,10 @@ const Commitment = () => {
     if (inView) {
       titleAnimation.start(titleAnimate);
 
+      titleBgAnimation.start(titleBgAnimate);
+
+      titleLineAnimation.start(titleLineAnimate);
+
       firstItemRowAnimation.start(firstItemRowAnimate);
 
       secondItemRowAnimation.start(secondItemRowAnimate);
@@ -157,9 +189,21 @@ const Commitment = () => {
 
   return (
     <Styled ref={contentRef}>
-      <motion.h2 initial={titleInitialState} animate={titleAnimation}>
-        Komitmen Kami
-      </motion.h2>
+      <div className='title'>
+        <motion.div
+          initial={titleBgInitialState}
+          animate={titleBgAnimation}
+          className='title__bg'
+        />
+        <motion.h2 initial={titleInitialState} animate={titleAnimation}>
+          Komitmen Kami
+        </motion.h2>
+        <motion.div
+          initial={titleLineInitialState}
+          animate={titleLineAnimation}
+          className='title__line'
+        />
+      </div>
       <div className='container'>
         <motion.div
           className='list-container'
