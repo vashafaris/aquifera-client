@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import styled from 'styled-components';
 
+import SEO from '../SEO';
+
 import { Colors } from '../../../enum/color.enum';
 
 const Styled = styled.div`
@@ -39,6 +41,7 @@ const Styled = styled.div`
 const Mobile = () => {
   return (
     <Styled>
+      <SEO title='Aquifer Nusantara' />
       <img src='/svg/aquifera.svg' alt='logo aquifera' />
       <ul>
         <li>
