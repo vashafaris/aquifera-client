@@ -4,6 +4,7 @@ import SEO from '../components/shared/SEO';
 
 const Styled = styled.main`
   display: flex;
+  position: relative;
   flex-direction: column;
   height: 100vh;
   align-items: center;
@@ -20,6 +21,11 @@ const Styled = styled.main`
   }
 
   p {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    text-align: center;
+    font-style: italic;
     font-size: 0.8em;
     font-style: italic;
   }
@@ -30,8 +36,10 @@ export default function Home() {
     <Styled>
       <SEO title='Aquifer Nusantara' />
       <img src='/png/aquifera-horizontal.png' alt='logo aquifera' />
-      <h1>Welcome To Aquifera!</h1>
-      <p>website still under construction</p>
+      <h1>
+        Selamat Datang <strong>Aquibuddy!</strong>
+      </h1>
+      <p>website kami masih dalam tahap pengembangan</p>
     </Styled>
   );
 }

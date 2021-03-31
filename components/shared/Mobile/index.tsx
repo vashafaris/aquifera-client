@@ -32,6 +32,7 @@ const Styled = styled.div`
     transform: translateX(-50%);
     font-size: 0.8rem;
     text-align: center;
+    font-style: italic;
   }
 `;
 
@@ -74,10 +75,7 @@ const Mobile = () => {
           </a>
         </li>
       </ul>
-      <p>
-        Untuk sementara versi <strong>mobile</strong> belum tersedia,Harap akses
-        melalui <strong>desktop/laptop</strong>.
-      </p>
+      <p>website kami masih dalam tahap pengembangan</p>
     </Styled>
   );
 };
