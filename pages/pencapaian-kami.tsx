@@ -8,8 +8,8 @@ const PencapaianKami = () => {
     <>
       <SEO title='Pencapaian Kami' />
 
-      {/* <Title title='Pencapaian' />
-      <SPencapaianKami.Mekarlaksana /> */}
+      <Title title='Pencapaian' />
+      <SPencapaianKami.Mekarlaksana />
     </>
   );
 };

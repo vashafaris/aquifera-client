@@ -6,10 +6,10 @@ export default function Home() {
   return (
     <>
       <SEO title='Home' />
-      {/* <SHome.Hero />
+      <SHome.Hero />
       <SHome.Village />
       <SHome.Commitment />
-      <SHome.Contribution /> */}
+      <SHome.Contribution />
     </>
   );
 }

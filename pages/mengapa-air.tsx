@@ -8,8 +8,8 @@ const MengapaAir = () => {
     <>
       <SEO title='Mengapa Air' />
 
-      {/* <Title title='Anda Wajib Tau' />
-      <SMengapaAir.Facts /> */}
+      <Title title='Anda Wajib Tau' />
+      <SMengapaAir.Facts />
     </>
   );
 };
