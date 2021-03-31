@@ -8,17 +8,6 @@ import Footer from '../components/shared/Footer';
 import Layout from '../components/shared/Layout';
 
 function MyApp({ Component, pageProps }) {
-  const currentDevice = useDevices();
-
-  if (currentDevice.isMobile()) {
-    return (
-      <>
-        <GlobalStyle />
-        <Mobile />
-      </>
-    );
-  }
-
   return (
     <>
       <Head>
