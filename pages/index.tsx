@@ -29,7 +29,7 @@ export default function Home() {
   return (
     <Styled>
       <SEO title='Aquifer Nusantara' />
-      <img src='/png/aquifera-horizontal.png' alt='' />
+      <img src='/png/aquifera-horizontal.png' alt='logo aquifera' />
       <h1>Welcome To Aquifera!</h1>
       <p>website still under construction</p>
     </Styled>
