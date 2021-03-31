@@ -15,9 +15,9 @@ function MyApp({ Component, pageProps }) {
         <link rel='icon' href='/svg/aquifera-logo.svg' />
       </Head>
       <GlobalStyle />
-      <Layout>
+      <>
         <Component {...pageProps} />
-      </Layout>
+      </>
     </>
   );
 }

@@ -8,8 +8,8 @@ const TentangKami = () => {
     <>
       <SEO title='tentang kami' />
 
-      <Title title='Tentang Kami' />
-      <STentangKami.Profile />
+      {/* <Title title='Tentang Kami' />
+      <STentangKami.Profile /> */}
     </>
   );
 };
