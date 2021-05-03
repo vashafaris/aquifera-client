@@ -277,7 +277,8 @@ const Hero = () => (
       <div className='main-container'>
         <p>FAKTANYA</p>
         <h1>
-          2 dari 10 orang Indonesia kesulitan dalam mengakses air bersih.{' '}
+          Hari ini, sekitar 1,9 milliar orang di muka bumi masih hidup di area
+          sulit air bersih.
         </h1>
         <div>
           <Button href='/mengapa-air'>Pelajari Lebih Lanjut</Button>

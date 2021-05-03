@@ -86,39 +86,34 @@ const Profile = () => {
       <img src='/png/us.png' />
       <div className='introduction'>
         <h2 className='introduction__title'>
-          We bring amazing people together to make amazing things happen.
+          Mewujudkan mimpi bersama, berkolaborasi dalam harmoni.
         </h2>
         <p>
-          Magnis tortor dictum tortor etiam laoreet faucibus. Leo fermentum,
-          odio leo, elit morbi. Duis justo elementum eget vehicula congue vitae
-          pellentesque lacinia. Sit eget in tellus vulputate risus et aliquam et
-          adipiscing. Ut sed et dui ipsum ullamcorper orci. Enim donec nisl,
-          augue augue aliquet sed lacus commodo vivamus. Ullamcorper hendrerit
-          rutrum ac ipsum ultrices.
+          Aquifera dimulai dari mimpi tiga orang alumni kampus Institut
+          Teknologi Bandung yang memiliki keresahan tehadap kondisi krisis air
+          bersih di Indonesia. Pada tahun 2020, mereka sepakat untuk mendirikan
+          sebuah organiasasi kemasyarakatan berbasis teknologi yang berfokus di
+          bidang air bersih. Kini Aquifera sudah mengajak banyak alumni dari
+          berbagai kampus seperti Universitas Padjajaran, Universitas Brawijaya
+          dan Institut Teknologi Nasional untuk berkolaborasi bersama di pilot
+          project ini.
         </p>
       </div>
       <div className='invitation'>
         <div className='invitation__quote'>
           <h4>
-            “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu tortor
-            diam enim ullamcorper feugiat amet, mi, ullamcorper.“
+            “Contemplate the good things in your life and be grateful for them.“
           </h4>
-          <h5>
-            Chief Executive Officer
-            <br />
-            Aquifera
-          </h5>
+          <h5>Co-Founder Aquifera</h5>
           <h3>Hafiyyan Fikri</h3>
         </div>
         <div className='invitation__description'>
-          <h2>Come work where sentences start with “What if…?”</h2>
+          <h2>Semua dimulai dari “Seandainya....”</h2>
           <p>
-            Magnis tortor dictum tortor etiam laoreet faucibus. Leo fermentum,
-            odio leo, elit morbi. Duis justo elementum eget vehicula congue
-            vitae pellentesque lacinia. Sit eget in tellus vulputate risus et
-            aliquam et adipiscing. Ut sed et dui ipsum ullamcorper orci. Enim
-            donec nisl, augue augue aliquet sed lacus commodo vivamus.
-            Ullamcorper hendrerit rutrum ac ipsum ultrices.
+            Berawal dari mimpi, Aquifera akan terus berusaha mewujudkan mimpi
+            ini menjadi nyata. Kami akan terus maju selangkah demi selangkah
+            mewujudkan Aquifera yang berhasil mengatasi krisis air bersih di
+            Indonesia
           </p>
         </div>
       </div>

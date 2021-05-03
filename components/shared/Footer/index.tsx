@@ -162,18 +162,6 @@ const Footer = () => {
       </ul>
 
       <p>&copy; Aquifera 2020</p>
-
-      <div className='sponsor-container'>
-        <p>AQUIFERA DIDUKUNG OLEH</p>
-        <div>
-          <Image
-            src='/png/home-mtt.png'
-            alt='logo mtt telkom'
-            height={55}
-            width={100}
-          />
-        </div>
-      </div>
     </Styled>
   );
 };

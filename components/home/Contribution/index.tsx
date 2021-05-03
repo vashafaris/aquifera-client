@@ -181,7 +181,7 @@ const Contribution = () => {
           className='title__bg'
         />
         <motion.h2 initial={titleInitialState} animate={titleAnimation}>
-          Kontribusi Kami
+          Harapan Kami
         </motion.h2>
         <motion.div
           initial={titleLineInitialState}
@@ -196,18 +196,18 @@ const Contribution = () => {
       >
         <div className='info-container'>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium
-            nisl morbi dictumst sed tincidunt consectetur congue nulla. Sed quis
-            ornare eu augue consequat turpis eget volutpat. Habitasse velit
-            laoreet urna, cursus lorem at et etiam justo. Faucibus vitae magna
-            leo semper lacus pulvinar cursus.
+            Dalam waktu 5 tahun kedepan Aquifera memiliki target untuk dapat
+            menyediakan 1000 projek di 100 daerah di seluruh Indonesia. Berbekal
+            dengan teknologi yang kami miliki yakni Water Box. Kami yakin bisa
+            mewujudkan mimpi kami “To Provide a Clean Water Access for Rural
+            Community”
           </p>
         </div>
         <div className='detail-container'>
-          <h4>20.000</h4>
-          <p>Masyarakat</p>
-          <h4>2160</h4>
-          <p>L/Jam</p>
+          <h4>1.000</h4>
+          <p>Projek</p>
+          <h4>100</h4>
+          <p>Daerah</p>
         </div>
       </motion.div>
       <motion.div
@@ -215,9 +215,9 @@ const Contribution = () => {
         initial={donationInitialState}
         animate={donationAnimation}
       >
-        <h3>Ingin Membantu Kami?</h3>
+        <h3>Tertarik Ikut Berkontribusi?</h3>
         <Input placeholder='Alamat Email' width='30%' margin={'.8rem 0'} />
-        <Button>Donasi</Button>
+        <Button>Hubungi Kami</Button>
       </motion.div>
     </Styled>
   );

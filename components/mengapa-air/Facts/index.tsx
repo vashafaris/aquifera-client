@@ -51,6 +51,7 @@ const Styled = styled.section`
     }
 
     &__description {
+      display: none;
       position: relative;
       flex: 0.3;
       padding-left: 5%;

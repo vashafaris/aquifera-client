@@ -273,15 +273,12 @@ const Village = () => {
             PILOT PROJECT
           </motion.h4>
           <motion.h2 initial={titleInitialState} animate={titleAnimation}>
-            Harapan untuk Desa
-            <br />
-            Mekarlaksana
+            Water Drilling Desa Mekarlaksana
           </motion.h2>
           <motion.p initial={descInitialState} animate={descAnimation}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium
-            nisl morbi dictumst sed tincidunt consectetur congue nulla. Sed quis
-            ornare eu augue consequat turpis eget volutpat. Habitasse velit
-            laoreet urna, cursus lorem at et etiam justo.{' '}
+            “Merancang dan menerapkan solusi berkelanjutan dalam mengatasi
+            ketersedian air bersih menggunakan teknologi tepat guna pada Desa
+            Mekarlaksana.”
           </motion.p>
           <motion.div initial={btnInitialState} animate={btnAnimation}>
             <Link href='/pencapaian-kami'>
