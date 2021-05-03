@@ -39,7 +39,8 @@ const Styled = styled.section`
     }
 
     &__image {
-      flex: 0.7;
+      flex: 1;
+      /* flex: 0.7; */
 
       display: flex;
       justify-content: flex-end;
