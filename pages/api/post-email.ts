@@ -9,7 +9,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     return;
   }
 
-  const { db } = await connectToDatabase();
+  const db = await connectToDatabase();
 
   db.collection('emails').insertOne(req.body, function (err, res) {
     if (err) throw err;
