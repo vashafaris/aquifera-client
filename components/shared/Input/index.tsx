@@ -3,7 +3,7 @@ import styled from 'styled-components';
 interface IProps {
   placeholder: string;
   width: string;
-  margin: string;
+  onChange: any;
 }
 
 const Styled = styled.input.attrs((props) => ({
@@ -20,8 +20,14 @@ const Styled = styled.input.attrs((props) => ({
   width: ${(props) => (props.width ? props.width : 'fit-content')};
 `;
 
-const Input = ({ placeholder, width, margin }: IProps) => {
-  return <Styled placeholder={placeholder} width={width} />;
+const Input = ({ placeholder, width, onChange }: IProps) => {
+  return (
+    <Styled
+      onChange={(e) => onChange(e)}
+      placeholder={placeholder}
+      width={width}
+    />
+  );
 };
 
 export default Input;

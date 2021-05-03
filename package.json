@@ -10,6 +10,7 @@
   "dependencies": {
     "chart.js": "2.9.4",
     "framer-motion": "2.9.5",
+    "mongodb": "^3.6.6",
     "next": "10.0.2",
     "react": "17.0.1",
     "react-chartjs-2": "2.11.1",

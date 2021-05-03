@@ -1,11 +1,11 @@
 import styled from 'styled-components';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
-import { Colors } from '../../../enum/color.enum';
-import Button from '../../shared/Button';
 import Input from '../../shared/Input';
+import { Colors } from '../../../enum/color.enum';
+import useEmailValidator from '../../../hooks/useEmailValidator';
 
 const Styled = styled.section`
   position: relative;
@@ -85,9 +85,40 @@ const Styled = styled.section`
     align-items: center;
     justify-content: center;
   }
+
+  .button {
+    padding: 0.8rem 2rem;
+    margin: 0;
+    min-width: 24rem;
+    width: fit-content;
+
+    position: relative;
+    display: block;
+    white-space: nowrap;
+    appearance: none;
+
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+
+    background-color: ${Colors.Secondary};
+    border: 1px solid rgba(0, 0, 0, 0.2);
+
+    font-size: 1.6rem;
+    line-height: 140%;
+    font-weight: bold;
+
+    transition: 0.3s;
+
+    :hover {
+      background-color: #ba833c;
+    }
+  }
 `;
 
 const Contribution = () => {
+  const [email, setEmail] = useState('');
+
   const [contentRef, inView] = useInView({
     triggerOnce: false,
     threshold: 0.2,
@@ -158,6 +189,31 @@ const Contribution = () => {
     },
   };
 
+  const handlePostEmail = async () => {
+    const isValidEmail = useEmailValidator(email);
+
+    if (!isValidEmail) {
+      alert('Periksa kembali format email anda');
+      return;
+    }
+
+    const body = {
+      email: email,
+    };
+    await fetch('/api/post-email', {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(body),
+    })
+      .then((res) => {
+        alert('Kami telah berhasil merekam email anda');
+      })
+      .catch((e) => console.log('err catch', e));
+  };
+
   useEffect(() => {
     if (inView) {
       titleAnimation.start(titleAnimate);
@@ -210,15 +266,25 @@ const Contribution = () => {
           <p>Daerah</p>
         </div>
       </motion.div>
-      <motion.div
+      <motion.form
         className='email-container'
         initial={donationInitialState}
         animate={donationAnimation}
+        onSubmit={(e) => {
+          e.preventDefault();
+          handlePostEmail();
+        }}
       >
         <h3>Tertarik Ikut Berkontribusi?</h3>
-        <Input placeholder='Alamat Email' width='30%' margin={'.8rem 0'} />
-        <Button>Hubungi Kami</Button>
-      </motion.div>
+        <Input
+          placeholder='Alamat Email'
+          width='30%'
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <button className='button' type='submit'>
+          Hubungi Kami
+        </button>
+      </motion.form>
     </Styled>
   );
 };
