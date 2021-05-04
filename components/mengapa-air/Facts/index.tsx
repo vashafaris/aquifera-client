@@ -5,6 +5,8 @@ import { Colors } from '../../../enum/color.enum';
 const Styled = styled.section`
   position: relative;
   padding: 5% 10%;
+  max-width: 1080px;
+  margin: auto;
 
   .fact {
     position: relative;
@@ -15,10 +17,11 @@ const Styled = styled.section`
     &__bg-rd-img {
       position: absolute;
       top: 1rem;
-      left: -4rem;
+      left: -8rem;
     }
 
     &__bg-img {
+      display: none;
       position: absolute;
       top: 30%;
       right: 0;

@@ -27,12 +27,12 @@ const Styled = styled.section`
       width: calc(27rem + 10%);
       height: 5.2rem;
       background-color: ${Colors.Secondary};
-      transform: translateY(0.2rem);
+      transform: translateY(0.3rem);
     }
 
     &__line {
       position: absolute;
-      left: calc(44rem + 10%);
+      left: calc(39rem + 10%);
       z-index: -1;
       display: inline-block;
       width: 25%;
@@ -146,7 +146,7 @@ const Contribution = () => {
   };
   const titleBgAnimate = {
     opacity: 1,
-    width: 'calc(27.5rem + 10%)',
+    width: 'calc(22.5rem + 10%)',
     transition: { delay: 0.4, duration: 1.2 },
   };
 

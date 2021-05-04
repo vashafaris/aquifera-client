@@ -125,10 +125,12 @@ const Commitment = () => {
     width: 0,
     originX: 0,
     originY: 0,
+    transform: 'translate(0rem, .3rem)',
   };
   const titleBgAnimate = {
     opacity: 1,
     width: 'calc(27.5rem + 10%)',
+    transform: 'translate(0, .3rem)',
     transition: { delay: 0.4, duration: 1.2 },
   };
 

@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import styled from 'styled-components';
 
 import { Colors } from '../../../enum/color.enum';
@@ -7,7 +6,7 @@ import { Colors } from '../../../enum/color.enum';
 const Styled = styled.footer`
   position: relative;
   padding: 2.4rem;
-  height: 32rem;
+  height: 24rem;
   background-color: ${Colors.Primary};
   color: #fff;
 
@@ -85,36 +84,12 @@ const Footer = () => {
     <Styled>
       <div className='logo-container'>
         <Image
-          src='/png/logo.png'
+          src='/svg/aquifera.svg'
           alt='logo aquifera'
-          width={116}
+          width={250}
           height={99}
         />
       </div>
-
-      <ul>
-        <li>
-          <Link href='/mengapa-air'>
-            <a>
-              <p>Mengapa Air</p>
-            </a>
-          </Link>
-        </li>
-        <li>
-          <Link href='/pencapaian-kami'>
-            <a>
-              <p>Pencapaian Kami</p>
-            </a>
-          </Link>
-        </li>
-        <li>
-          <Link href='/tentang-kami'>
-            <a>
-              <p>Tentang Kami</p>
-            </a>
-          </Link>
-        </li>
-      </ul>
 
       <ul>
         <li>
@@ -160,8 +135,6 @@ const Footer = () => {
           </a>
         </li>
       </ul>
-
-      <p>&copy; Aquifera 2020</p>
     </Styled>
   );
 };
