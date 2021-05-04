@@ -252,7 +252,7 @@ const Mekarlaksana = () => {
 
       <div className='waterbox'>
         <div className='waterbox__image'>
-          <Image src='/png/water-box.png' height={321} width={382} />
+          <Image src='/svg/water-box.svg' height={321} width={382} />
         </div>
         <div className='waterbox__description'>
           <h1>Waterbox IoT</h1>

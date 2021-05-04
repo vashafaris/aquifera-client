@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import styled from 'styled-components';
+
 import { Colors } from '../../../enum/color.enum';
 
 const Styled = styled.section`
@@ -12,7 +13,7 @@ const Styled = styled.section`
 
   h2 {
     margin-bottom: 1.2rem;
-    font-size: 4.8rem;
+    font-size: 3.6rem;
     line-height: 130%;
     letter-spacing: -2%;
   }
@@ -24,8 +25,8 @@ const Styled = styled.section`
 
   .introduction {
     position: relative;
-    padding: 5% 10% 10%;
-    width: 80%;
+    padding: 5% 10%;
+    display: flex;
 
     &__title {
       position: relative;
@@ -43,18 +44,78 @@ const Styled = styled.section`
         background-image: url('/svg/fact-bg-rd.svg');
       }
     }
+
+    &__left {
+      flex: 0.5;
+      margin-right: 5%;
+    }
+
+    &__right {
+      flex: 0.5;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .quote {
+        margin-top: 1.2rem;
+        text-align: center;
+
+        h4 {
+          text-transform: uppercase;
+          line-height: 180.3%;
+          font-size: 1.4rem;
+        }
+
+        h5 {
+          margin: 0.8rem 0;
+          font-size: 1.2rem;
+          line-height: 140%;
+          font-weight: 400;
+        }
+
+        h3 {
+          font-size: 1.4rem;
+        }
+      }
+    }
   }
 
-  .invitation {
-    position: relative;
-    padding: 0 10% 5%;
+  .intro {
+    max-width: 680px;
+    margin: auto;
 
-    display: flex;
+    &__title {
+      position: relative;
 
-    &__quote {
-      flex: 0.4;
-      padding: 0 10%;
-      transform: translateY(1.2rem);
+      ::before {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        top: -4rem;
+        left: -4rem;
+        width: 12rem;
+        height: 12rem;
+        z-index: -1;
+        border-radius: 50%;
+        background-image: url('/svg/fact-bg-rd.svg');
+      }
+    }
+
+    h2 {
+      font-size: 4.8rem;
+      text-transform: capitalize;
+      transform: translateX(-2rem);
+    }
+
+    > div {
+      :first-child {
+        margin: 20vh 0;
+      }
+    }
+
+    .quote {
+      margin-top: 1.2rem;
+      margin-bottom: 5%;
 
       h4 {
         text-transform: uppercase;
@@ -70,12 +131,22 @@ const Styled = styled.section`
       }
 
       h3 {
-        font-size: 2.4rem;
+        font-size: 1.4rem;
       }
     }
+  }
 
-    &__description {
-      flex: 0.6;
+  .sponsor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 4rem;
+
+    h4 {
+      font-size: 1.4rem;
+      margin-bottom: 1.2rem;
+      font-weight: normal;
     }
   }
 `;
@@ -84,37 +155,46 @@ const Profile = () => {
   return (
     <Styled>
       <img src='/png/us.png' />
-      <div className='introduction'>
-        <h2 className='introduction__title'>
-          Mewujudkan mimpi bersama, berkolaborasi dalam harmoni.
-        </h2>
-        <p>
-          Aquifera dimulai dari mimpi tiga orang alumni kampus Institut
-          Teknologi Bandung yang memiliki keresahan tehadap kondisi krisis air
-          bersih di Indonesia. Pada tahun 2020, mereka sepakat untuk mendirikan
-          sebuah organiasasi kemasyarakatan berbasis teknologi yang berfokus di
-          bidang air bersih. Kini Aquifera sudah mengajak banyak alumni dari
-          berbagai kampus seperti Universitas Padjajaran, Universitas Brawijaya
-          dan Institut Teknologi Nasional untuk berkolaborasi bersama di pilot
-          project ini.
-        </p>
-      </div>
-      <div className='invitation'>
-        <div className='invitation__quote'>
-          <h4>
-            “Contemplate the good things in your life and be grateful for them.“
-          </h4>
-          <h5>Co-Founder Aquifera</h5>
-          <h3>Hafiyyan Fikri</h3>
+      <div className='intro'>
+        <div>
+          <h2 className='intro__title'>
+            Mewujudkan mimpi bersama, berkolaborasi dalam harmoni.
+          </h2>
+          <p>
+            Aquifera dimulai dari mimpi tiga orang alumni kampus Institut
+            Teknologi Bandung yang memiliki keresahan tehadap kondisi krisis air
+            bersih di Indonesia. Pada tahun 2020, mereka sepakat untuk
+            mendirikan sebuah organiasasi kemasyarakatan berbasis teknologi yang
+            berfokus di bidang air bersih. Kini Aquifera sudah mengajak banyak
+            alumni dari berbagai kampus seperti Universitas Padjajaran,
+            Universitas Brawijaya dan Institut Teknologi Nasional untuk
+            berkolaborasi bersama di pilot project ini.
+          </p>
         </div>
-        <div className='invitation__description'>
-          <h2>Semua dimulai dari “Seandainya....”</h2>
+
+        <div>
+          <h2 className='intro__title'>Semua dimulai dari “Seandainya....”</h2>
           <p>
             Berawal dari mimpi, Aquifera akan terus berusaha mewujudkan mimpi
             ini menjadi nyata. Kami akan terus maju selangkah demi selangkah
             mewujudkan Aquifera yang berhasil mengatasi krisis air bersih di
             Indonesia
           </p>
+
+          <div className='quote'>
+            <h4>
+              <strong>
+                “Contemplate the good things in your life and be grateful for
+                them.“
+              </strong>
+            </h4>
+            <span>Hafiyyan Fikri - Co-Founder Aquifera</span>
+          </div>
+
+          <div className='sponsor'>
+            <h4>Aquifera Didukung Oleh</h4>
+            <Image src='/svg/logo-mtt.svg' height={80} width={150} />
+          </div>
         </div>
       </div>
     </Styled>

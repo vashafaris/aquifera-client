@@ -10,6 +10,7 @@ const Styled = styled.input.attrs((props) => ({
   type: 'text',
   placeholder: props.placeholder,
 }))`
+  outline: none;
   border-radius: 3px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   display: block;

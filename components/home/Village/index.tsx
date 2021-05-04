@@ -165,8 +165,8 @@ const Village = () => {
   };
   const textBgAnimate = {
     opacity: 1,
-    width: '26rem',
-    transform: 'translate(26rem, 3.8rem)',
+    width: '20rem',
+    transform: 'translate(20rem, 3.3rem)',
     transition: { delay: 0.4, duration: 1.2 },
   };
 
