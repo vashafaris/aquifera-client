@@ -207,11 +207,10 @@ const Mekarlaksana = () => {
             <br />
             <br />
             Walaupun berlokasi di daerah pegunungan, beberapa wilayah bagian di
-            Desa Mekarlaksana, khususnya di RW 06 mengalami kekeringan air
-            ketika menghadapi musim kemarau. Untuk mencari sumber air bersih
-            lainnya, para penduduk RW 5 Desa Mekarlaksana yang berjumlah sekitar
-            500 jiwa harus mengambil air bersih hingga ke daerah perkandangan
-            ayam dan mengantri hingga malam hari.
+            Desa Mekarlaksana, khususnya di RW 5 mengalami kekeringan air ketika
+            menghadapi musim kemarau. Untuk mencari sumber air bersih lainnya,
+            para penduduk RW 5 Desa Mekarlaksana yang berjumlah sekitar 300 jiwa
+            harus mengambil air bersih hingga ke sungai.
           </p>
           <div className='achievement-icons'>
             <Image src='/svg/achievement-1.svg' height={110} width={110} />
