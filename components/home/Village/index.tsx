@@ -99,6 +99,7 @@ const Styled = styled.section`
       }
 
       p {
+        line-height: 161%;
         margin-bottom: 1.6rem;
         color: ${Colors.Primary};
       }

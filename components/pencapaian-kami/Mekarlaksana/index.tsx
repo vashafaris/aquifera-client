@@ -225,7 +225,7 @@ const Mekarlaksana = () => {
 
       <div className='gallery'>
         <div className='gallery__description'>
-          <h1>Desa Galeri Kegiatan di Desa</h1>
+          <h1>Galeri Kegiatan di Desa</h1>
           <p>
             Melihat Kondisi desa seperti itu, tim Aquifera memutuskan untuk
             melaksanakan pilot project di Desa Mekarlaksana. Selama hampir 1

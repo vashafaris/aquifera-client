@@ -85,7 +85,6 @@ const Styled = styled.section`
 
           p {
             width: 100%;
-            font-weight: 200;
             line-height: 161%;
           }
 

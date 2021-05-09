@@ -38,6 +38,10 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
     cursor: pointer;
   }
+
+  p {
+    line-height: 161%;
+  }
 `;
 
 export default GlobalStyle;

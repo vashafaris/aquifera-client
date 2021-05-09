@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "chart.js": "2.9.4",
+    "classnames": "^2.3.1",
     "framer-motion": "2.9.5",
     "mongodb": "^3.6.6",
     "next": "10.0.2",

@@ -1,7 +1,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import styled from 'styled-components';
+import cn from 'classnames';
 
+import { HeaderRoutes } from './header.const';
 import { Colors } from '../../../enum/color.enum';
 
 const Styled = styled.header`
@@ -60,6 +63,10 @@ const Styled = styled.header`
             :hover {
               border-bottom: 3px solid ${Colors.Secondary};
             }
+
+            &.active {
+              border-bottom: 3px solid ${Colors.Secondary};
+            }
           }
         }
       }
@@ -68,6 +75,8 @@ const Styled = styled.header`
 `;
 
 const Header = () => {
+  const router = useRouter();
+  console.log(router.pathname);
   return (
     <Styled>
       <nav>
@@ -85,21 +94,19 @@ const Header = () => {
         </div>
         <div className='block--right'>
           <ul>
-            <li>
-              <Link href='/mengapa-air'>
-                <a>Mengapa Air ?</a>
-              </Link>
-            </li>
-            <li>
-              <Link href='/pencapaian-kami'>
-                <a>Pencapaian Kami</a>
-              </Link>
-            </li>
-            <li>
-              <Link href='/tentang-kami'>
-                <a>Tentang Kami</a>
-              </Link>
-            </li>
+            {HeaderRoutes.map((headerRoute) => (
+              <li>
+                <Link href={headerRoute.link}>
+                  <a
+                    className={cn({
+                      active: router.pathname === headerRoute.link,
+                    })}
+                  >
+                    {headerRoute.title}
+                  </a>
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
       </nav>
