@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { Line } from 'react-chartjs-2';
 import styled from 'styled-components';
 import { COLOR } from '../../../constants/color.constant';
+import { DEVICE_SIZE } from '../../../constants/device.constant';
 
 const Styled = styled.section`
   position: relative;
@@ -35,11 +36,19 @@ const Styled = styled.section`
 
     &__description {
       flex: 0.5;
+
+      @media (max-width: ${DEVICE_SIZE.mobileL}) {
+        flex: 1;
+      }
     }
 
     &__image {
       flex: 0.5;
       padding-left: 5%;
+
+      @media (max-width: ${DEVICE_SIZE.mobileL}) {
+        display: none;
+      }
     }
   }
 
@@ -48,6 +57,10 @@ const Styled = styled.section`
 
     display: flex;
     align-items: center;
+
+    @media (max-width: ${DEVICE_SIZE.mobileL}) {
+      flex-direction: column;
+    }
 
     h1 {
       margin-bottom: 0.8rem;
@@ -62,11 +75,20 @@ const Styled = styled.section`
 
     &__description {
       flex: 0.5;
+
+      @media (max-width: ${DEVICE_SIZE.mobileL}) {
+        flex: 1;
+      }
     }
 
     &__image {
       flex: 0.5;
       padding-left: 5%;
+
+      @media (max-width: ${DEVICE_SIZE.mobileL}) {
+        margin-top: 4.8rem;
+        padding-left: 0;
+      }
     }
   }
 
