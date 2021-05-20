@@ -95,7 +95,7 @@ const Header = () => {
         <div className='block--right'>
           <ul>
             {HeaderRoutes.map((headerRoute) => (
-              <li>
+              <li key={headerRoute.link}>
                 <Link href={headerRoute.link}>
                   <a
                     className={cn({
