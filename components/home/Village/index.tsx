@@ -26,7 +26,7 @@ const Styled = styled.section`
     top: 0;
     right: 0;
 
-    @media (max-width: ${DEVICE_SIZE.laptop}) {
+    @media (max-width: ${DEVICE_SIZE.tablet}) {
       flex: 0;
       display: none;
     }
@@ -38,7 +38,7 @@ const Styled = styled.section`
 
     display: flex;
 
-    @media (max-width: ${DEVICE_SIZE.laptop}) {
+    @media (max-width: ${DEVICE_SIZE.tablet}) {
       flex-direction: column;
     }
 
@@ -50,15 +50,20 @@ const Styled = styled.section`
       display: flex;
       justify-content: flex-end;
 
-      @media (max-width: ${DEVICE_SIZE.laptop}) {
+      @media (max-width: ${DEVICE_SIZE.tablet}) {
         flex: 0;
         display: none;
       }
 
       &--small {
-        display: flex;
+        display: none;
+
         justify-content: center;
         margin-bottom: 3.6rem;
+
+        @media (max-width: ${DEVICE_SIZE.tablet}) {
+          display: flex;
+        }
 
         .village-img {
           width: 48rem;
@@ -76,7 +81,7 @@ const Styled = styled.section`
         position: relative;
         border: 0.1rem solid black;
 
-        @media (max-width: ${DEVICE_SIZE.laptop}) {
+        @media (max-width: ${DEVICE_SIZE.tablet}) {
           display: none;
         }
       }
@@ -89,7 +94,7 @@ const Styled = styled.section`
         width: 20rem;
         height: 20rem;
 
-        @media (max-width: ${DEVICE_SIZE.laptop}) {
+        @media (max-width: ${DEVICE_SIZE.tablet}) {
           display: none;
         }
       }
@@ -106,7 +111,7 @@ const Styled = styled.section`
 
         transform: translate(0.8rem, 1rem);
 
-        @media (max-width: ${DEVICE_SIZE.laptop}) {
+        @media (max-width: ${DEVICE_SIZE.tablet}) {
           display: none;
         }
       }
@@ -285,12 +290,10 @@ const Village = () => {
       />
       <div className='container'>
         <div className='img-container--small'>
-          <motion.img
+          <img
             src='/png/home-village.png'
             alt='desa mekarlaksana'
             className='village-img'
-            animate={imgAnimation}
-            initial={imgInitialState}
           />
         </div>
         <div className='img-container'>

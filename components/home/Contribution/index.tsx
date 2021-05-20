@@ -295,7 +295,7 @@ const Contribution = () => {
         <h3>Tertarik Ikut Berkontribusi?</h3>
         <Input
           placeholder='Alamat Email'
-          width='30%'
+          width='40%'
           onChange={(e) => setEmail(e.target.value)}
         />
         <button className='button' type='submit'>
