@@ -51,7 +51,7 @@ const Styled = styled.section`
       .img-bg-rd {
         position: absolute;
         top: 0;
-        left: 0;
+        right: 36rem;
         transform: translateY(-50%);
         width: 20rem;
         height: 20rem;
