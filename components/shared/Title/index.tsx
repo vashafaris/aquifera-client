@@ -1,12 +1,12 @@
 import styled from 'styled-components';
-import { Colors } from '../../../enum/color.enum';
+import { COLOR } from '../../../constants/color.constant';
 
 const Styled = styled.div`
   height: 24rem;
   padding-top: 7rem;
-  background-color: ${Colors.Primary};
+  background-color: ${COLOR.primary};
   color: #fff;
-  border-bottom: 1px solid ${Colors.Secondary};
+  border-bottom: 1px solid ${COLOR.secondary};
 
   display: flex;
   align-items: center;

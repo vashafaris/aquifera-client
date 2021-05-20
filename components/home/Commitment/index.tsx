@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
-import { Colors } from '../../../enum/color.enum';
+import { COLOR } from '../../../constants/color.constant';
 
 const Styled = styled.section`
   position: relative;
@@ -35,7 +35,7 @@ const Styled = styled.section`
       display: inline-block;
       width: calc(27.5rem + 10%);
       height: 5.2rem;
-      background-color: ${Colors.Secondary};
+      background-color: ${COLOR.secondary};
       transform: var(--before-x);
     }
 
@@ -45,7 +45,7 @@ const Styled = styled.section`
       z-index: -1;
       display: inline-block;
       width: 25%;
-      border-bottom: 1px solid ${Colors.Secondary};
+      border-bottom: 1px solid ${COLOR.secondary};
       transform: translate(0, -2.8rem);
     }
   }
@@ -68,7 +68,7 @@ const Styled = styled.section`
         }
 
         padding: 2rem 4rem;
-        color: ${Colors.Primary};
+        color: ${COLOR.primary};
 
         display: flex;
 

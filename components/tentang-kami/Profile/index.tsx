@@ -1,14 +1,14 @@
 import Image from 'next/image';
 import styled from 'styled-components';
 
-import { Colors } from '../../../enum/color.enum';
+import { COLOR } from '../../../constants/color.constant';
 
 const Styled = styled.section`
   position: relative;
 
   img {
     max-width: 100%;
-    border-bottom: 1px solid ${Colors.Secondary};
+    border-bottom: 1px solid ${COLOR.secondary};
   }
 
   h2 {
@@ -19,7 +19,7 @@ const Styled = styled.section`
   }
 
   p {
-    color: ${Colors.Primary};
+    color: ${COLOR.primary};
     line-height: 161%;
   }
 

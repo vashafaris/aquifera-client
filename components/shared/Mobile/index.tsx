@@ -3,12 +3,12 @@ import styled from 'styled-components';
 
 import SEO from '../SEO';
 
-import { Colors } from '../../../enum/color.enum';
+import { COLOR } from '../../../constants/color.constant';
 
 const Styled = styled.div`
   padding: 2rem;
   min-height: 100vh;
-  background-color: ${Colors.Primary};
+  background-color: ${COLOR.primary};
   color: #fff;
 
   display: flex;

@@ -2,7 +2,7 @@ import Link from 'next/link';
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
 
-import { Colors } from '../../../enum/color.enum';
+import { COLOR } from '../../../constants/color.constant';
 
 interface IProps {
   children: any;
@@ -24,7 +24,7 @@ const Styled = styled.button`
   cursor: pointer;
   border: none;
 
-  background-color: ${Colors.Secondary};
+  background-color: ${COLOR.secondary};
   border: 1px solid rgba(0, 0, 0, 0.2);
 
   font-size: 1.6rem;

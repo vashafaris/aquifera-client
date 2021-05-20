@@ -4,8 +4,8 @@ import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 import Input from '../../shared/Input';
-import { Colors } from '../../../enum/color.enum';
 import useEmailValidator from '../../../hooks/useEmailValidator';
+import { COLOR } from '../../../constants/color.constant';
 
 const Styled = styled.section`
   position: relative;
@@ -26,7 +26,7 @@ const Styled = styled.section`
       display: inline-block;
       width: calc(27rem + 10%);
       height: 5.2rem;
-      background-color: ${Colors.Secondary};
+      background-color: ${COLOR.secondary};
       transform: translateY(0.3rem);
     }
 
@@ -36,13 +36,13 @@ const Styled = styled.section`
       z-index: -1;
       display: inline-block;
       width: 25%;
-      border-bottom: 1px solid ${Colors.Secondary};
+      border-bottom: 1px solid ${COLOR.secondary};
       transform: translate(0, -5rem);
     }
   }
 
   .container {
-    color: ${Colors.Primary};
+    color: ${COLOR.primary};
 
     display: flex;
     align-items: center;
@@ -101,7 +101,7 @@ const Styled = styled.section`
     cursor: pointer;
     border: none;
 
-    background-color: ${Colors.Secondary};
+    background-color: ${COLOR.secondary};
     border: 1px solid rgba(0, 0, 0, 0.2);
 
     font-size: 1.6rem;

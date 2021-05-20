@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import styled from 'styled-components';
-import { Colors } from '../../../enum/color.enum';
+import { COLOR } from '../../../constants/color.constant';
 
 const Styled = styled.section`
   position: relative;
@@ -61,7 +61,7 @@ const Styled = styled.section`
       padding-left: 5%;
 
       p {
-        color: ${Colors.Primary};
+        color: ${COLOR.primary};
         line-height: 161%;
 
         ::before {
@@ -72,7 +72,7 @@ const Styled = styled.section`
           left: calc(10%);
           width: calc(100% + 27%);
           height: 6rem;
-          background-color: ${Colors.Secondary};
+          background-color: ${COLOR.secondary};
           opacity: 0.2;
           z-index: -1;
           overflow: hidden;

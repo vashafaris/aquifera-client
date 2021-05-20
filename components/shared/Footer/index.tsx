@@ -1,13 +1,13 @@
 import Image from 'next/image';
 import styled from 'styled-components';
 
-import { Colors } from '../../../enum/color.enum';
+import { COLOR } from '../../../constants/color.constant';
 
 const Styled = styled.footer`
   position: relative;
   padding: 2.4rem;
   height: 24rem;
-  background-color: ${Colors.Primary};
+  background-color: ${COLOR.primary};
   color: #fff;
 
   display: flex;
@@ -73,7 +73,7 @@ const Styled = styled.footer`
       width: 10rem;
       height: 5.5rem;
       border-radius: 0.4rem;
-      background-color: ${Colors.Secondary};
+      background-color: ${COLOR.secondary};
       transform: translateX(-3rem);
     }
   }

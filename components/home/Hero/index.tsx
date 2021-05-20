@@ -2,16 +2,16 @@ import Image from 'next/image';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-import { Colors } from '../../../enum/color.enum';
-
 import Button from '../../shared/Button';
+import { DEVICE_SIZE } from '../../../constants/device.constant';
+import { COLOR } from '../../../constants/color.constant';
 
 const Styled = styled.section`
   position: relative;
   height: 100vh;
   padding-top: 7rem;
   padding-left: 5%;
-  background-color: ${Colors.Primary};
+  background-color: ${COLOR.primary};
   color: #fff;
 
   display: flex;
@@ -20,8 +20,13 @@ const Styled = styled.section`
     position: absolute;
     top: 0;
     left: 0;
-    height: 100%;
+    height: 100vh;
+    max-width: 80%;
     transform: translateX(4%);
+
+    @media (max-width: ${DEVICE_SIZE.laptop}) {
+      display: none;
+    }
   }
 
   .icon-container {
@@ -30,6 +35,10 @@ const Styled = styled.section`
 
     display: flex;
     align-items: center;
+
+    @media (max-width: ${DEVICE_SIZE.laptop}) {
+      display: none;
+    }
 
     .img-container {
       flex: 1;

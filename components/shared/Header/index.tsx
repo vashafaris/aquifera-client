@@ -4,8 +4,8 @@ import { useRouter } from 'next/router';
 import styled from 'styled-components';
 import cn from 'classnames';
 
-import { HeaderRoutes } from './header.const';
-import { Colors } from '../../../enum/color.enum';
+import { HeaderRoutes } from './header.constant';
+import { COLOR } from '../../../constants/color.constant';
 
 const Styled = styled.header`
   z-index: 10;
@@ -15,7 +15,7 @@ const Styled = styled.header`
   height: 7rem;
   width: 100%;
   padding: 0 5%;
-  background-color: ${Colors.Primary};
+  background-color: ${COLOR.primary};
   color: #fff;
   border-bottom: 1px solid rgb(255, 255, 255, 20%);
   opacity: 0.95;
@@ -57,15 +57,15 @@ const Styled = styled.header`
 
           a {
             padding: 0.8rem 0;
-            border-bottom: 3px solid ${Colors.Primary};
+            border-bottom: 3px solid ${COLOR.primary};
             transition: 0.3s;
 
             :hover {
-              border-bottom: 3px solid ${Colors.Secondary};
+              border-bottom: 3px solid ${COLOR.secondary};
             }
 
             &.active {
-              border-bottom: 3px solid ${Colors.Secondary};
+              border-bottom: 3px solid ${COLOR.secondary};
             }
           }
         }

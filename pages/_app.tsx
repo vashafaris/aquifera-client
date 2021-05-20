@@ -1,10 +1,9 @@
 import Head from 'next/head';
-import GlobalStyle from '../styles/global';
-import useDevices from '../hooks/useDevices';
-
-import Mobile from '../components/shared/Mobile';
 
 import '../styles/font.css';
+import GlobalStyle from '../styles/global';
+import useDevices from '../hooks/useDevices';
+import Mobile from '../components/shared/Mobile';
 
 function MyApp({ Component, pageProps }) {
   const currentDevice = useDevices();

@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { Line } from 'react-chartjs-2';
 import styled from 'styled-components';
-import { Colors } from '../../../enum/color.enum';
+import { COLOR } from '../../../constants/color.constant';
 
 const Styled = styled.section`
   position: relative;
@@ -19,7 +19,7 @@ const Styled = styled.section`
     }
 
     p {
-      color: ${Colors.Primary};
+      color: ${COLOR.primary};
       line-height: 161%;
     }
 
@@ -56,7 +56,7 @@ const Styled = styled.section`
     }
 
     p {
-      color: ${Colors.Primary};
+      color: ${COLOR.primary};
       line-height: 161%;
     }
 
@@ -95,7 +95,7 @@ const Styled = styled.section`
     }
 
     p {
-      color: ${Colors.Primary};
+      color: ${COLOR.primary};
       line-height: 161%;
     }
 
@@ -130,17 +130,17 @@ const data = {
       label: 'Kontribusi Aquifera',
       fill: false,
       lineTension: 0.4,
-      backgroundColor: Colors.Primary,
-      borderColor: Colors.Primary,
+      backgroundColor: COLOR.primary,
+      borderColor: COLOR.primary,
       borderCapStyle: 'butt',
       borderDash: [],
       borderDashOffset: 0.0,
       borderJoinStyle: 'miter',
-      pointBorderColor: Colors.Primary,
+      pointBorderColor: COLOR.primary,
       pointBackgroundColor: '#fff',
       pointBorderWidth: 1,
       pointHoverRadius: 5,
-      pointHoverBackgroundColor: Colors.Primary,
+      pointHoverBackgroundColor: COLOR.primary,
       pointHoverBorderColor: '#fff',
       pointHoverBorderWidth: 2,
       pointRadius: 6,
@@ -151,17 +151,17 @@ const data = {
       label: 'Projeksi Ketersediaan Air Berdasarkan Data BPS',
       fill: false,
       lineTension: 0.4,
-      backgroundColor: Colors.Secondary,
-      borderColor: Colors.Secondary,
+      backgroundColor: COLOR.secondary,
+      borderColor: COLOR.secondary,
       borderCapStyle: 'butt',
       borderDash: [],
       borderDashOffset: 0.0,
       borderJoinStyle: 'miter',
-      pointBorderColor: Colors.Secondary,
+      pointBorderColor: COLOR.secondary,
       pointBackgroundColor: '#fff',
       pointBorderWidth: 1,
       pointHoverRadius: 5,
-      pointHoverBackgroundColor: Colors.Secondary,
+      pointHoverBackgroundColor: COLOR.secondary,
       pointHoverBorderColor: '#fff',
       pointHoverBorderWidth: 2,
       pointRadius: 6,

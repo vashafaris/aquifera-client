@@ -3,8 +3,7 @@ import Link from 'next/link';
 import styled from 'styled-components';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-
-import { Colors } from '../../../enum/color.enum';
+import { COLOR } from '../../../constants/color.constant';
 
 const Styled = styled.section`
   position: relative;
@@ -64,7 +63,7 @@ const Styled = styled.section`
         right: 0;
         width: 48rem;
         height: 32rem;
-        background-color: ${Colors.Primary};
+        background-color: ${COLOR.primary};
         border: 0.1rem solid black;
 
         transform: translate(0.8rem, 1rem);
@@ -76,7 +75,7 @@ const Styled = styled.section`
         right: -1rem;
         width: 2rem;
         height: 5.2rem;
-        background-color: ${Colors.Secondary};
+        background-color: ${COLOR.secondary};
 
         transform: translate(26rem, 3.8rem);
       }
@@ -101,7 +100,7 @@ const Styled = styled.section`
       p {
         line-height: 161%;
         margin-bottom: 1.6rem;
-        color: ${Colors.Primary};
+        color: ${COLOR.primary};
       }
 
       a {
@@ -111,7 +110,7 @@ const Styled = styled.section`
         transition: 0.3s;
 
         :hover {
-          border-bottom: 3px solid ${Colors.Secondary};
+          border-bottom: 3px solid ${COLOR.secondary};
         }
       }
     }
