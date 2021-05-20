@@ -1,4 +1,4 @@
-Check our production 👉 [https://aquifera-client.vercel.app/](https://aquifera-client.vercel.app/)
+Check our production 👉 [https://aquifera.com/](https://aquifera.com/)
 
 ## Getting Started
 
