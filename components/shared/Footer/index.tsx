@@ -2,6 +2,7 @@ import Image from 'next/image';
 import styled from 'styled-components';
 
 import { COLOR } from '../../../constants/color.constant';
+import { DEVICE_SIZE } from '../../../constants/device.constant';
 
 const Styled = styled.footer`
   position: relative;
@@ -19,6 +20,10 @@ const Styled = styled.footer`
     position: relative;
     width: 20rem;
     height: 10rem;
+
+    @media (max-width: ${DEVICE_SIZE.mobileL}) {
+      display: none;
+    }
   }
 
   ul {

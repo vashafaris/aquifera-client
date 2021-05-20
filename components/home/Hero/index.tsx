@@ -16,10 +16,6 @@ const Styled = styled.section`
 
   display: flex;
 
-  @media (max-width: ${DEVICE_SIZE.mobileL}) {
-    height: 80vh;
-  }
-
   .img-background {
     position: absolute;
     top: 0;
