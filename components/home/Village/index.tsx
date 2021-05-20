@@ -38,6 +38,10 @@ const Styled = styled.section`
 
     display: flex;
 
+    @media (max-width: ${DEVICE_SIZE.laptop}) {
+      flex-direction: column;
+    }
+
     .img-container {
       position: relative;
       margin-right: 5rem;
@@ -49,6 +53,20 @@ const Styled = styled.section`
       @media (max-width: ${DEVICE_SIZE.laptop}) {
         flex: 0;
         display: none;
+      }
+
+      &--small {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 3.6rem;
+
+        .village-img {
+          width: 48rem;
+          height: 32rem;
+          z-index: 2;
+          position: relative;
+          border: 0.1rem solid black;
+        }
       }
 
       .village-img {
@@ -266,6 +284,15 @@ const Village = () => {
         className='line-bg'
       />
       <div className='container'>
+        <div className='img-container--small'>
+          <motion.img
+            src='/png/home-village.png'
+            alt='desa mekarlaksana'
+            className='village-img'
+            animate={imgAnimation}
+            initial={imgInitialState}
+          />
+        </div>
         <div className='img-container'>
           <motion.img
             src='/svg/home-bg-rd-2.svg'

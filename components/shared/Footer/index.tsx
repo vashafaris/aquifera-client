@@ -16,6 +16,10 @@ const Styled = styled.footer`
   align-items: center;
   justify-content: space-around;
 
+  @media (max-width: ${DEVICE_SIZE.mobileL}) {
+    height: 18rem;
+  }
+
   .logo-container {
     position: relative;
     width: 20rem;
@@ -23,6 +27,14 @@ const Styled = styled.footer`
 
     @media (max-width: ${DEVICE_SIZE.mobileL}) {
       display: none;
+    }
+  }
+
+  .info {
+    display: none;
+
+    @media (max-width: ${DEVICE_SIZE.mobileL}) {
+      display: block;
     }
   }
 
@@ -96,6 +108,7 @@ const Footer = () => {
       <div className='logo-container'>
         <Image src='/svg/aquifera.svg' alt='logo aquifera' layout='fill' />
       </div>
+      <div className='info'>Jangan sampai ketinggalan info terkini</div>
 
       <ul>
         <li>
