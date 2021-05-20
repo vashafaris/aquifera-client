@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import { DEVICE_SIZE } from '../constants/device.constant';
 
 const GlobalStyle = createGlobalStyle`
   *,
@@ -14,14 +15,12 @@ const GlobalStyle = createGlobalStyle`
     font-size: 62.5%;
     box-sizing: border-box;
 
-    /* 768px */
-    @media screen and (max-width: 48em) {
+    @media screen and (max-width: ${DEVICE_SIZE.laptop}) {
       font-size: 56.25%;
     }
 
-    /* 576px */
-    @media screen and (max-width: 36em) {
-      font-size: 50%;
+    @media screen and (max-width: ${DEVICE_SIZE.mobileM}) {
+      font-size: 40%;
     }
   }
 

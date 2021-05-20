@@ -3,7 +3,9 @@ import Link from 'next/link';
 import styled from 'styled-components';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+
 import { COLOR } from '../../../constants/color.constant';
+import { DEVICE_SIZE } from '../../../constants/device.constant';
 
 const Styled = styled.section`
   position: relative;
@@ -23,6 +25,11 @@ const Styled = styled.section`
 
     top: 0;
     right: 0;
+
+    @media (max-width: ${DEVICE_SIZE.tablet}) {
+      flex: 0;
+      display: none;
+    }
   }
 
   .container {
@@ -30,6 +37,10 @@ const Styled = styled.section`
     position: relative;
 
     display: flex;
+
+    @media (max-width: ${DEVICE_SIZE.tablet}) {
+      flex-direction: column;
+    }
 
     .img-container {
       position: relative;
@@ -39,12 +50,41 @@ const Styled = styled.section`
       display: flex;
       justify-content: flex-end;
 
+      @media (max-width: ${DEVICE_SIZE.tablet}) {
+        flex: 0;
+        display: none;
+      }
+
+      &--small {
+        display: none;
+
+        justify-content: center;
+        margin-bottom: 3.6rem;
+
+        @media (max-width: ${DEVICE_SIZE.tablet}) {
+          display: flex;
+        }
+
+        .village-img {
+          width: 48rem;
+          height: 32rem;
+          max-width: 90%;
+          z-index: 2;
+          position: relative;
+          border: 0.1rem solid black;
+        }
+      }
+
       .village-img {
         width: 48rem;
         height: 32rem;
         z-index: 2;
         position: relative;
         border: 0.1rem solid black;
+
+        @media (max-width: ${DEVICE_SIZE.tablet}) {
+          display: none;
+        }
       }
 
       .img-bg-rd {
@@ -54,6 +94,10 @@ const Styled = styled.section`
         transform: translateY(-50%);
         width: 20rem;
         height: 20rem;
+
+        @media (max-width: ${DEVICE_SIZE.tablet}) {
+          display: none;
+        }
       }
 
       .img-bg {
@@ -67,6 +111,10 @@ const Styled = styled.section`
         border: 0.1rem solid black;
 
         transform: translate(0.8rem, 1rem);
+
+        @media (max-width: ${DEVICE_SIZE.tablet}) {
+          display: none;
+        }
       }
 
       .text-bg {
@@ -242,6 +290,13 @@ const Village = () => {
         className='line-bg'
       />
       <div className='container'>
+        <div className='img-container--small'>
+          <img
+            src='/png/home-village.png'
+            alt='desa mekarlaksana'
+            className='village-img'
+          />
+        </div>
         <div className='img-container'>
           <motion.img
             src='/svg/home-bg-rd-2.svg'

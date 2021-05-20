@@ -1,5 +1,7 @@
 import styled from 'styled-components';
+
 import { COLOR } from '../../../constants/color.constant';
+import { DEVICE_SIZE } from '../../../constants/device.constant';
 
 const Styled = styled.div`
   height: 24rem;
@@ -14,6 +16,10 @@ const Styled = styled.div`
 
   h1 {
     font-size: 5.2rem;
+
+    @media (max-width: ${DEVICE_SIZE.mobileL}) {
+      font-size: 3.6rem;
+    }
   }
 `;
 

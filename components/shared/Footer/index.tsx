@@ -2,6 +2,7 @@ import Image from 'next/image';
 import styled from 'styled-components';
 
 import { COLOR } from '../../../constants/color.constant';
+import { DEVICE_SIZE } from '../../../constants/device.constant';
 
 const Styled = styled.footer`
   position: relative;
@@ -14,6 +15,28 @@ const Styled = styled.footer`
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+
+  @media (max-width: ${DEVICE_SIZE.mobileL}) {
+    height: 18rem;
+  }
+
+  .logo-container {
+    position: relative;
+    width: 20rem;
+    height: 10rem;
+
+    @media (max-width: ${DEVICE_SIZE.mobileL}) {
+      display: none;
+    }
+  }
+
+  .info {
+    display: none;
+
+    @media (max-width: ${DEVICE_SIZE.mobileL}) {
+      display: block;
+    }
+  }
 
   ul {
     list-style-type: none;
@@ -83,13 +106,9 @@ const Footer = () => {
   return (
     <Styled>
       <div className='logo-container'>
-        <Image
-          src='/svg/aquifera.svg'
-          alt='logo aquifera'
-          width={250}
-          height={99}
-        />
+        <Image src='/svg/aquifera.svg' alt='logo aquifera' layout='fill' />
       </div>
+      <div className='info'>Jangan sampai ketinggalan info terkini</div>
 
       <ul>
         <li>

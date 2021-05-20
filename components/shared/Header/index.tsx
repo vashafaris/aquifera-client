@@ -6,6 +6,7 @@ import cn from 'classnames';
 
 import { HeaderRoutes } from './header.constant';
 import { COLOR } from '../../../constants/color.constant';
+import { DEVICE_SIZE } from '../../../constants/device.constant';
 
 const Styled = styled.header`
   z-index: 10;
@@ -23,6 +24,11 @@ const Styled = styled.header`
   display: flex;
   align-items: center;
 
+  .logo {
+    height: 20rem;
+    width: 15rem;
+  }
+
   nav {
     position: relative;
     flex: 1;
@@ -39,11 +45,22 @@ const Styled = styled.header`
       a {
         transform: translateX(-2.5rem);
       }
+
+      @media (max-width: ${DEVICE_SIZE.mobileL}) {
+        padding-left: 10%;
+        justify-content: flex-start;
+        flex: 0.7;
+      }
     }
 
     .block--right {
       flex: 0.6;
       white-space: nowrap;
+
+      @media (max-width: ${DEVICE_SIZE.mobileL}) {
+        flex: 0.3;
+        display: none;
+      }
 
       ul {
         list-style-type: none;
@@ -76,7 +93,7 @@ const Styled = styled.header`
 
 const Header = () => {
   const router = useRouter();
-  console.log(router.pathname);
+
   return (
     <Styled>
       <nav>
@@ -86,8 +103,8 @@ const Header = () => {
               <Image
                 src='/svg/aquifera.svg'
                 alt='logo aquifera'
-                width={150}
-                height={50}
+                layout='fill'
+                className='logo-aquifera'
               />
             </a>
           </Link>

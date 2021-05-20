@@ -73,48 +73,6 @@ const Styled = styled.section`
   }
 `;
 
-const textVariants = {
-  hidden: {
-    opacity: 0,
-  },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.4,
-    },
-  },
-};
-
-const childVariants = {
-  hidden: {
-    y: '3.6rem',
-    opacity: 0,
-  },
-  visible: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.8,
-    },
-  },
-};
-
-const svgVariants = {
-  hidden: {
-    opacity: 0,
-  },
-  visible: {
-    opacity: 1,
-    x: 0,
-    y: 0,
-    scale: 1,
-    rotate: 0,
-    transition: {
-      duration: 1.5,
-    },
-  },
-};
-
 const pathVariants = {
   hidden: {
     pathLength: 0,

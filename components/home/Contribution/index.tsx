@@ -6,6 +6,7 @@ import { useInView } from 'react-intersection-observer';
 import Input from '../../shared/Input';
 import useEmailValidator from '../../../hooks/useEmailValidator';
 import { COLOR } from '../../../constants/color.constant';
+import { DEVICE_SIZE } from '../../../constants/device.constant';
 
 const Styled = styled.section`
   position: relative;
@@ -38,6 +39,10 @@ const Styled = styled.section`
       width: 25%;
       border-bottom: 1px solid ${COLOR.secondary};
       transform: translate(0, -5rem);
+
+      @media (max-width: ${DEVICE_SIZE.tablet}) {
+        display: none;
+      }
     }
   }
 
@@ -84,6 +89,18 @@ const Styled = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media (max-width: ${DEVICE_SIZE.mobileL}) {
+      flex-direction: column;
+
+      h3 {
+        margin-bottom: 1.2rem;
+      }
+
+      .button {
+        margin-top: 1.2rem;
+      }
+    }
   }
 
   .button {
@@ -278,7 +295,7 @@ const Contribution = () => {
         <h3>Tertarik Ikut Berkontribusi?</h3>
         <Input
           placeholder='Alamat Email'
-          width='30%'
+          width='40%'
           onChange={(e) => setEmail(e.target.value)}
         />
         <button className='button' type='submit'>
