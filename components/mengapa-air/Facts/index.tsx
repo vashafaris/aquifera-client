@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import styled from 'styled-components';
 import { COLOR } from '../../../constants/color.constant';
+import { DEVICE_SIZE } from '../../../constants/device.constant';
 
 const Styled = styled.section`
   position: relative;
@@ -18,6 +19,10 @@ const Styled = styled.section`
       position: absolute;
       top: 1rem;
       left: -8rem;
+
+      @media (max-width: ${DEVICE_SIZE.mobileL}) {
+        display: none;
+      }
     }
 
     &__bg-img {
@@ -25,6 +30,10 @@ const Styled = styled.section`
       position: absolute;
       top: 30%;
       right: 0;
+
+      @media (max-width: ${DEVICE_SIZE.mobileL}) {
+        display: none;
+      }
     }
 
     &__title {
@@ -33,6 +42,10 @@ const Styled = styled.section`
 
       display: flex;
       flex-direction: column;
+
+      @media (max-width: ${DEVICE_SIZE.mobileL}) {
+        width: 60%;
+      }
 
       &__line {
         margin: 0.4rem 0;
@@ -43,14 +56,14 @@ const Styled = styled.section`
 
     &__image {
       flex: 1;
-      /* flex: 0.7; */
 
       display: flex;
       justify-content: flex-end;
       align-self: center;
+      margin-top: 8rem;
 
-      :nth-child(3) {
-        margin-top: 8rem;
+      @media (max-width: ${DEVICE_SIZE.mobileL}) {
+        margin-top: 16rem;
       }
     }
 

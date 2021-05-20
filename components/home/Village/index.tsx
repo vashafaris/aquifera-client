@@ -68,6 +68,7 @@ const Styled = styled.section`
         .village-img {
           width: 48rem;
           height: 32rem;
+          max-width: 90%;
           z-index: 2;
           position: relative;
           border: 0.1rem solid black;
