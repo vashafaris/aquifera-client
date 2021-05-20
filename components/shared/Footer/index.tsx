@@ -15,6 +15,12 @@ const Styled = styled.footer`
   align-items: center;
   justify-content: space-around;
 
+  .logo-container {
+    position: relative;
+    width: 20rem;
+    height: 10rem;
+  }
+
   ul {
     list-style-type: none;
 
@@ -83,12 +89,7 @@ const Footer = () => {
   return (
     <Styled>
       <div className='logo-container'>
-        <Image
-          src='/svg/aquifera.svg'
-          alt='logo aquifera'
-          width={250}
-          height={99}
-        />
+        <Image src='/svg/aquifera.svg' alt='logo aquifera' layout='fill' />
       </div>
 
       <ul>

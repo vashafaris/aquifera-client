@@ -5,6 +5,7 @@ import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 import { COLOR } from '../../../constants/color.constant';
+import { DEVICE_SIZE } from '../../../constants/device.constant';
 
 const Styled = styled.section`
   position: relative;
@@ -20,6 +21,11 @@ const Styled = styled.section`
     top: 0;
     right: 0;
     transform: translateY(50%);
+
+    @media (max-width: ${DEVICE_SIZE.laptop}) {
+      flex: 0;
+      display: none;
+    }
   }
 
   .title {
@@ -47,6 +53,10 @@ const Styled = styled.section`
       width: 25%;
       border-bottom: 1px solid ${COLOR.secondary};
       transform: translate(0, -2.8rem);
+
+      @media (max-width: ${DEVICE_SIZE.tablet}) {
+        display: none;
+      }
     }
   }
 
@@ -65,6 +75,10 @@ const Styled = styled.section`
 
         @media (max-width: 1306px) {
           flex-basis: 50%;
+        }
+
+        @media (max-width: ${DEVICE_SIZE.mobileL}) {
+          flex-basis: 100%;
         }
 
         padding: 2rem 4rem;
